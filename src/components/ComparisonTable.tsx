@@ -1,55 +1,64 @@
-import { Check, X } from "lucide-react";
+import { Check, X, Zap, Clock, Sparkles, Shield, Headphones, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Badge } from "@/components/ui/badge";
 
 const comparisonData = [
   {
-    feature: "Upfront payment",
-    traditional: "₦300,000+",
-    websync: "₦6,999 monthly — no big fees",
-    isTraditionalBad: true,
+    feature: "Initial Cost",
+    icon: Zap,
+    traditional: "₦300,000 - ₦500,000 upfront",
+    websync: "Just ₦6,999/month",
+    highlight: "Save 98% upfront",
   },
   {
-    feature: "Time to launch",
-    traditional: "Takes 3–6 weeks",
-    websync: "Live in 3–5 days",
-    isTraditionalBad: true,
+    feature: "Launch Time",
+    icon: Clock,
+    traditional: "3-6 weeks waiting",
+    websync: "Live in 3-5 days",
+    highlight: "10x faster",
   },
   {
-    feature: "Updates",
-    traditional: "Static — no easy updates",
-    websync: "Unlimited updates anytime",
-    isTraditionalBad: true,
+    feature: "Content Updates",
+    icon: Sparkles,
+    traditional: "₦15,000+ per update",
+    websync: "Unlimited updates FREE",
+    highlight: "Always fresh",
   },
   {
-    feature: "Hosting",
-    traditional: "You find your own",
-    websync: "Hosting included",
-    isTraditionalBad: true,
+    feature: "Hosting & Domain",
+    icon: Rocket,
+    traditional: "Pay separately (₦50k+/year)",
+    websync: "Included FREE forever",
+    highlight: "No hidden costs",
   },
   {
-    feature: "Tech support",
-    traditional: "You handle issues",
-    websync: "We manage everything",
-    isTraditionalBad: true,
+    feature: "Technical Support",
+    icon: Headphones,
+    traditional: "Extra charges per hour",
+    websync: "24/7 support included",
+    highlight: "Always there",
   },
   {
-    feature: "Maintenance",
-    traditional: "Pay extra for edits",
-    websync: "Fully covered",
-    isTraditionalBad: true,
+    feature: "Maintenance & Security",
+    icon: Shield,
+    traditional: "₦100k+ yearly contracts",
+    websync: "Fully managed FREE",
+    highlight: "Worry-free",
   },
   {
-    feature: "Communication",
-    traditional: "Delays & meetings",
-    websync: "Fast WhatsApp support",
-    isTraditionalBad: true,
+    feature: "Design Updates",
+    icon: Sparkles,
+    traditional: "Redesign = ₦200k+",
+    websync: "Evolve anytime FREE",
+    highlight: "Never outdated",
   },
   {
-    feature: "Partnership",
-    traditional: "One-time project",
-    websync: "Ongoing partnership",
-    isTraditionalBad: true,
+    feature: "Total First Year Cost",
+    icon: Zap,
+    traditional: "₦450,000 - ₦800,000",
+    websync: "Only ₦83,988",
+    highlight: "Save ₦400k+",
   },
 ];
 
@@ -72,41 +81,73 @@ export const ComparisonTable = () => {
 
         <div className={`bg-card rounded-2xl shadow-blue-strong overflow-hidden border border-border ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
           {/* Header */}
-          <div className="grid grid-cols-2 bg-primary/5 border-b border-border">
-            <div className="p-6 text-center border-r border-border">
-              <h3 className="text-xl font-semibold text-muted-foreground">
+          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_1fr] bg-primary/5 border-b-2 border-border">
+            <div className="hidden md:block p-6 border-r border-border">
+              <h3 className="text-lg font-bold">Feature</h3>
+            </div>
+            <div className="p-6 text-center border-b md:border-b-0 md:border-r border-border">
+              <h3 className="text-lg md:text-xl font-semibold text-muted-foreground">
                 Traditional Web Agency
               </h3>
+              <p className="text-sm text-muted-foreground/70 mt-1">The old expensive way</p>
             </div>
             <div className="p-6 text-center bg-primary/10">
-              <h3 className="text-xl font-semibold text-primary">
-                Websync (₦6,999/month)
+              <h3 className="text-lg md:text-xl font-bold text-primary">
+                Websync
               </h3>
+              <p className="text-sm text-primary/80 mt-1">The smart affordable way</p>
             </div>
           </div>
 
           {/* Rows */}
-          {comparisonData.map((row, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-2 ${
-                index !== comparisonData.length - 1 ? "border-b border-border" : ""
-              }`}
-            >
-              <div className="p-6 border-r border-border flex items-center gap-3">
-                <X className="w-5 h-5 text-destructive flex-shrink-0" />
-                <span className="text-muted-foreground">{row.traditional}</span>
+          {comparisonData.map((row, index) => {
+            const Icon = row.icon;
+            return (
+              <div
+                key={index}
+                className={`grid grid-cols-1 md:grid-cols-[200px_1fr_1fr] ${
+                  index !== comparisonData.length - 1 ? "border-b border-border" : ""
+                } hover:bg-accent/5 transition-colors`}
+              >
+                <div className="p-4 md:p-6 border-b md:border-b-0 md:border-r border-border bg-muted/30">
+                  <div className="flex items-center gap-3">
+                    <Icon className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="font-semibold text-sm md:text-base">{row.feature}</span>
+                  </div>
+                </div>
+                <div className="p-4 md:p-6 border-b md:border-b-0 md:border-r border-border">
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground text-sm md:text-base">{row.traditional}</span>
+                  </div>
+                </div>
+                <div className="p-4 md:p-6 bg-primary/5">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="font-semibold text-sm md:text-base">{row.websync}</span>
+                    </div>
+                    <Badge variant="secondary" className="w-fit ml-8 text-xs bg-primary/20 text-primary border-primary/30">
+                      {row.highlight}
+                    </Badge>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 flex items-center gap-3 bg-primary/5">
-                <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-medium">{row.websync}</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <p className="text-center text-lg md:text-xl mt-12 mb-8 text-foreground max-w-4xl mx-auto">
-          Why drop ₦300K once when ₦6,999/month keeps your website fresh, fast, and forever premium?
+        <div className="mt-12 p-8 bg-primary/10 rounded-2xl border-2 border-primary/30">
+          <p className="text-center text-lg md:text-2xl font-bold text-foreground mb-2">
+            💰 Bottom Line: Save Over ₦400,000 in Year 1 Alone!
+          </p>
+          <p className="text-center text-base md:text-lg text-muted-foreground">
+            Plus unlimited updates, support, and hosting — all included forever.
+          </p>
+        </div>
+
+        <p className="text-center text-lg md:text-xl mt-8 mb-8 text-foreground max-w-4xl mx-auto">
+          Stop paying premium prices for basic service. Get premium quality at revolutionary pricing.
         </p>
 
         <div className="text-center">

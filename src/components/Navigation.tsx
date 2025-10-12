@@ -4,9 +4,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "How It Works", href: "#how-it-works" },
-  { name: "Comparison", href: "#comparison" },
+  { name: "Portfolio", href: "#portfolio" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Video", href: "#video" },
+  { name: "About", href: "#about" },
 ];
 
 export const Navigation = () => {
@@ -28,8 +28,12 @@ export const Navigation = () => {
   };
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith('/')) {
+      window.location.href = href;
+    } else {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 

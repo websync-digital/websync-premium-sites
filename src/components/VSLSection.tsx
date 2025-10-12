@@ -25,7 +25,7 @@ export const VSLSection = () => {
           <div className="relative pt-[56.25%]">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+              src="https://www.youtube.com/embed/j50u35dP5II?rel=0"
               title="Websync Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroLaptop from "@/assets/hero-laptop.jpg";
 import heroBusinessOwner from "@/assets/hero-business-owner.jpg";
@@ -52,6 +52,13 @@ export const HeroSlider = () => {
     document.getElementById("onboarding-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openWhatsApp = () => {
+    const phoneNumber = "+2348012345678"; // Replace with actual WhatsApp number
+    const message = "Hi, I'd like to know more about Websync";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Slides */}
@@ -83,14 +90,24 @@ export const HeroSlider = () => {
             Get a luxury-level website for just ₦6,999/month. Built and managed by our Vibe Coders team. 
             You own your domain — we handle everything else.
           </p>
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="text-lg px-12 py-6 h-auto mb-4 animate-fade-in"
-            onClick={scrollToForm}
-          >
-            Get Started for ₦6,999/month
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-12 py-6 h-auto animate-fade-in"
+              onClick={scrollToForm}
+            >
+              Get Started for ₦6,999/month
+            </Button>
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 h-auto bg-[#25D366] hover:bg-[#20BA5A] text-white animate-fade-in"
+              onClick={openWhatsApp}
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Chat on WhatsApp
+            </Button>
+          </div>
           <p className="text-sm text-primary-foreground/90 animate-fade-in">
             No setup fee. No stress. Just results.
           </p>
