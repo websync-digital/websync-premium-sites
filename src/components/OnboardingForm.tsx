@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -43,6 +44,7 @@ export const OnboardingForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { ref, isVisible } = useScrollReveal();
+  const navigate = useNavigate();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -68,10 +70,13 @@ export const OnboardingForm = () => {
     
     console.log("Form data:", data);
     
-    toast.success("Form submitted successfully! We'll contact you on WhatsApp shortly.");
-    setIsSuccess(true);
+    toast.success("Form submitted successfully! Redirecting to payment...");
     setIsSubmitting(false);
-    form.reset();
+    
+    // Redirect to payment page after a brief delay
+    setTimeout(() => {
+      navigate('/payment');
+    }, 1000);
   };
 
   if (isSuccess) {
@@ -318,7 +323,7 @@ export const OnboardingForm = () => {
                 className="w-full text-lg py-6"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting..." : "Submit & Pay ₦6,999"}
+                {isSubmitting ? "Processing..." : "Proceed to Payment"}
               </Button>
             </form>
           </Form>
