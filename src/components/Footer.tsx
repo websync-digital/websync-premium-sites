@@ -1,8 +1,10 @@
 import { MessageCircle, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
-  const scrollToForm = () => {
-    document.getElementById("onboarding-form")?.scrollIntoView({ behavior: "smooth" });
+  const currentYear = new Date().getFullYear();
+  const redirectToPayment = () => {
+    window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
   };
 
   return (
@@ -11,7 +13,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary mb-4">Websync</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">Websyncdigital</h3>
             <p className="text-muted-foreground">
               Premium Websites. One Small Monthly Fee. Built and managed by Vibe Coders.
             </p>
@@ -25,7 +27,7 @@ export const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary key hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
@@ -63,6 +65,9 @@ export const Footer = () => {
               >
                 Comparison
               </button>
+              <Link to="/resources" className="text-muted-foreground hover:text-primary transition-colors text-left">
+                Resources
+              </Link>
               <button
                 onClick={() => document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" })}
                 className="text-muted-foreground hover:text-primary transition-colors text-left"
@@ -70,7 +75,7 @@ export const Footer = () => {
                 Pricing
               </button>
               <button
-                onClick={scrollToForm}
+                onClick={redirectToPayment}
                 className="text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 Get Started
@@ -82,12 +87,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <nav className="flex flex-col space-y-3">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
+              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms & Privacy
+              </Link>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 Refund Policy
               </a>
@@ -102,11 +104,11 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-4">
               <a
-                href="mailto:hello@websync.com"
+                href="mailto:digitalwebsync@gmail.com"
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span>websyncwebsite@gmail.com</span>
+                <span>digitalwebsync@gmail.com</span>
               </a>
               <a
                 href="tel:+2347043576814"
@@ -135,11 +137,11 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2025 Websync. All rights reserved. Built with care by Vibe Coders.
+            <p className="text-muted-foreground">
+              &copy; {currentYear} Websyncdigital. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground">
-              Proudly serving businesses across Nigeria 🇳🇬
+            <p className="text-muted-foreground/60 text-xs mt-2 md:mt-0">
+              Proudly serving businesses in <span className="text-primary/80">Anambra</span>, <span className="text-primary/80">Lagos</span>, <span className="text-primary/80">Abuja</span>, & <span className="text-primary/80">Port Harcourt</span>.
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -64,18 +64,18 @@ export const OnboardingForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     console.log("Form data:", data);
-    
+
     toast.success("Form submitted successfully! Redirecting to payment...");
     setIsSubmitting(false);
-    
-    // Redirect to payment page after a brief delay
+
+    // Redirect to Paystack payment link after a brief delay
     setTimeout(() => {
-      navigate('/payment');
+      window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
     }, 1000);
   };
 
@@ -101,7 +101,7 @@ export const OnboardingForm = () => {
             </div>
             <h2 className="text-3xl font-bold mb-4">Thank You!</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Your form has been submitted successfully. Our Vibe Coders team will contact you 
+              Your form has been submitted successfully. Our Vibe Coders team will contact you
               on WhatsApp within 24 hours to discuss your premium website.
             </p>
             <Button
@@ -123,7 +123,7 @@ export const OnboardingForm = () => {
         <div className="text-center mb-12">
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>Get Started</h2>
           <p className={`text-lg text-muted-foreground ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            Fill out the form below and we'll get your premium website live in 3–5 days
+            Fill out the form below and we'll get your premium website live in 7–14 days
           </p>
         </div>
 
@@ -203,9 +203,9 @@ export const OnboardingForm = () => {
                       Domain Preference <span className="text-destructive">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input 
-                        placeholder="e.g., I own mydomain.com / I want Websync to buy it" 
-                        {...field} 
+                      <Input
+                        placeholder="e.g., I own mydomain.com / I want Websyncdigital to buy it"
+                        {...field}
                       />
                     </FormControl>
                     <FormMessage />
@@ -288,14 +288,10 @@ export const OnboardingForm = () => {
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel className="text-sm font-normal cursor-pointer">
-                        I agree to Websync{" "}
-                        <a href="#" className="text-primary hover:underline">
-                          Terms
-                        </a>{" "}
-                        &{" "}
-                        <a href="#" className="text-primary hover:underline">
-                          Privacy
-                        </a>{" "}
+                        I agree to Websyncdigital{" "}
+                        <Link to="/terms" target="_blank" className="text-primary hover:underline">
+                          Terms & Privacy
+                        </Link>{" "}
                         <span className="text-destructive">*</span>
                       </FormLabel>
                       <FormMessage />

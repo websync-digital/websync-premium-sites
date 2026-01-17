@@ -9,7 +9,7 @@ const testimonials = [
     role: "Fashion Store Owner",
     image: "",
     initials: "CO",
-    content: "Websync transformed my fashion business! My new website brought in 5x more customers in just 2 months. Worth every kobo!",
+    content: "Websyncdigital transformed my fashion business! My new website brought in 5x more customers in just 2 months. Worth every kobo!",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ export const TestimonialsSection = () => {
             What Our Clients Say
           </h2>
           <p className={`text-lg text-muted-foreground max-w-2xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            Join hundreds of Nigerian businesses already growing with Websync
+            Join hundreds of Nigerian businesses already growing with Websyncdigital
           </p>
         </div>
 

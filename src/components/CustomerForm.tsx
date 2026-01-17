@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Loader2, User, Mail, Phone, Building2 } from "lucide-react";
-import TermsDialog from "./TermsDialog";
+import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -71,10 +71,10 @@ const CustomerForm = () => {
     }
   };
 
-  const isFormValid = formData.fullName.trim() && 
-    formData.email.trim() && 
-    validateEmail(formData.email) && 
-    formData.phone.trim() && 
+  const isFormValid = formData.fullName.trim() &&
+    formData.email.trim() &&
+    validateEmail(formData.email) &&
+    formData.phone.trim() &&
     validatePhone(formData.phone);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -106,7 +106,7 @@ const CustomerForm = () => {
   return (
     <form onSubmit={handleSubmit} className="glass-card p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="section-title">Your Information</h2>
-      
+
       <div className="space-y-5">
         {/* Full Name */}
         <div className="space-y-2">
@@ -114,14 +114,14 @@ const CustomerForm = () => {
             <User className="w-4 h-4 text-muted-foreground" />
             Full Name <span className="text-destructive">*</span>
           </Label>
-          <Input 
-            id="fullName" 
-            type="text" 
-            placeholder="Enter your full name" 
-            className="form-input" 
-            value={formData.fullName} 
-            onChange={e => handleChange("fullName", e.target.value)} 
-            onBlur={() => handleBlur("fullName")} 
+          <Input
+            id="fullName"
+            type="text"
+            placeholder="Enter your full name"
+            className="form-input"
+            value={formData.fullName}
+            onChange={e => handleChange("fullName", e.target.value)}
+            onBlur={() => handleBlur("fullName")}
           />
           {touched.fullName && errors.fullName && (
             <p className="text-sm text-destructive">{errors.fullName}</p>
@@ -134,14 +134,14 @@ const CustomerForm = () => {
             <Mail className="w-4 h-4 text-muted-foreground" />
             Email Address <span className="text-destructive">*</span>
           </Label>
-          <Input 
-            id="email" 
-            type="email" 
-            placeholder="your@email.com" 
-            className="form-input" 
-            value={formData.email} 
-            onChange={e => handleChange("email", e.target.value)} 
-            onBlur={() => handleBlur("email")} 
+          <Input
+            id="email"
+            type="email"
+            placeholder="your@email.com"
+            className="form-input"
+            value={formData.email}
+            onChange={e => handleChange("email", e.target.value)}
+            onBlur={() => handleBlur("email")}
           />
           {touched.email && errors.email && (
             <p className="text-sm text-destructive">{errors.email}</p>
@@ -154,14 +154,14 @@ const CustomerForm = () => {
             <Phone className="w-4 h-4 text-muted-foreground" />
             Phone Number <span className="text-destructive">*</span>
           </Label>
-          <Input 
-            id="phone" 
-            type="tel" 
-            placeholder="+234 xxx xxx xxxx" 
-            className="form-input" 
-            value={formData.phone} 
-            onChange={e => handleChange("phone", e.target.value)} 
-            onBlur={() => handleBlur("phone")} 
+          <Input
+            id="phone"
+            type="tel"
+            placeholder="+234 xxx xxx xxxx"
+            className="form-input"
+            value={formData.phone}
+            onChange={e => handleChange("phone", e.target.value)}
+            onBlur={() => handleBlur("phone")}
           />
           {touched.phone && errors.phone && (
             <p className="text-sm text-destructive">{errors.phone}</p>
@@ -174,33 +174,28 @@ const CustomerForm = () => {
             <Building2 className="w-4 h-4 text-muted-foreground" />
             Business Name <span className="text-muted-foreground text-xs">(optional)</span>
           </Label>
-          <Input 
-            id="businessName" 
-            type="text" 
-            placeholder="Your business name" 
-            className="form-input" 
-            value={formData.businessName} 
-            onChange={e => handleChange("businessName", e.target.value)} 
+          <Input
+            id="businessName"
+            type="text"
+            placeholder="Your business name"
+            className="form-input"
+            value={formData.businessName}
+            onChange={e => handleChange("businessName", e.target.value)}
           />
         </div>
       </div>
 
-      {/* Terms Notice */}
       <p className="text-xs text-muted-foreground text-center mt-6">
         By proceeding, you agree to our{" "}
-        <TermsDialog 
-          trigger={
-            <button type="button" className="text-primary hover:underline font-medium">
-              Terms of Service & Privacy Policy
-            </button>
-          } 
-        />
+        <Link to="/terms" target="_blank" className="text-primary hover:underline font-medium">
+          Terms of Service & Privacy Policy
+        </Link>
       </p>
 
       {/* Submit Button */}
-      <button 
-        type="submit" 
-        disabled={!isFormValid || isLoading} 
+      <button
+        type="submit"
+        disabled={!isFormValid || isLoading}
         className="cta-button flex items-center justify-center gap-2 mt-4"
       >
         {isLoading ? (

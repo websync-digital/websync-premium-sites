@@ -5,7 +5,7 @@ const PaymentFooter = () => {
   }}>
       
       <p className="text-xs text-muted-foreground/70 mb-2">
-        Websync © 2025 — All Rights Reserved.
+        Websyncdigital © 2025 — All Rights Reserved.
       </p>
       <div className="flex justify-center gap-4">
         <a href="#" className="text-xs text-primary hover:underline transition-colors">

@@ -19,11 +19,11 @@ const PricingCard = () => {
 
       <div className="text-center mb-8 pt-4">
         <div className="text-5xl font-bold text-foreground tracking-tight">
-          ₦5,999
+          ₦6,999
         </div>
         <div className="text-muted-foreground mt-1">per month</div>
         <div className="inline-flex items-center gap-2 mt-3 text-sm">
-          <span className="text-muted-foreground line-through">₦5,999</span>
+          <span className="text-muted-foreground line-through">₦7,999</span>
           <span className="bg-destructive/10 text-destructive text-xs font-medium px-2 py-0.5 rounded">
             Save ₦1,000
           </span>

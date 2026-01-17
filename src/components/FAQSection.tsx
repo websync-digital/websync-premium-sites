@@ -8,9 +8,9 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "Will Websync have access to my money?",
+    question: "Will Websyncdigital have access to my money?",
     answer:
-      "No. Websync only receives your subscription payment after you authorize it securely through your bank.",
+      "No. Websyncdigital only receives your subscription payment after you authorize it securely through your bank.",
   },
   {
     question: "Why do I need to verify with BVN?",

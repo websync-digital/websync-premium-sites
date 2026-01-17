@@ -34,7 +34,7 @@ export const HowItWorks = () => {
           How It Works
         </h2>
         <p className={`text-center text-muted-foreground mb-16 text-lg ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-          Live in 3–5 days after form submission
+          Live in 7–14 days after form submission
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

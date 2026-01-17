@@ -7,53 +7,53 @@ const comparisonData = [
     feature: "Upfront Cost",
     icon: Zap,
     traditional: "₦300,000 - ₦500,000",
-    websync: "₦5,999/month",
+    Websyncdigital: "₦6,999/month",
   },
   {
     feature: "Time to Launch",
     icon: Clock,
     traditional: "3-6 weeks",
-    websync: "3-5 days",
+    Websyncdigital: "7-14 days",
   },
   {
     feature: "Content Updates",
     icon: Sparkles,
     traditional: "₦15,000+ per update",
-    websync: "Free unlimited",
+    Websyncdigital: "Free unlimited",
   },
   {
-    feature: "Hosting & Domain",
+    feature: "Hosting",
     icon: Rocket,
     traditional: "₦50,000+/year extra",
-    websync: "Included free",
+    Websyncdigital: "Included free",
   },
   {
     feature: "Support",
     icon: Headphones,
     traditional: "Pay per hour",
-    websync: "24/7 included",
+    Websyncdigital: "24/7 included",
   },
   {
     feature: "Maintenance",
     icon: Shield,
     traditional: "₦100,000+/year",
-    websync: "Free forever",
+    Websyncdigital: "Free forever",
   },
 ];
 
-const scrollToForm = () => {
-  document.getElementById("onboarding-form")?.scrollIntoView({ behavior: "smooth" });
+const redirectToPayment = () => {
+  window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
 };
 
 export const ComparisonTable = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="comparison" className="py-24 px-4 bg-secondary/30 scroll-mt-20">
+    <section id="comparison" className="py-24 px-4 bg-gradient-to-b from-transparent via-secondary/30 to-transparent scroll-mt-20">
       <div className="max-w-4xl mx-auto" ref={ref}>
         <div className="text-center mb-12">
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-            Traditional vs Websync
+            Traditional vs Websyncdigital
           </h2>
           <p className={`text-muted-foreground ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             See the difference
@@ -65,7 +65,7 @@ export const ComparisonTable = () => {
           <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
             <div className="p-4 font-semibold">Feature</div>
             <div className="p-4 text-center font-semibold text-muted-foreground">Traditional</div>
-            <div className="p-4 text-center font-semibold text-primary">Websync</div>
+            <div className="p-4 text-center font-semibold text-primary">Websyncdigital</div>
           </div>
 
           {/* Rows */}
@@ -89,7 +89,7 @@ export const ComparisonTable = () => {
                 <div className="p-4 text-center bg-primary/5">
                   <div className="flex items-center justify-center gap-2">
                     <Check className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium">{row.websync}</span>
+                    <span className="text-sm font-medium">{row.Websyncdigital}</span>
                   </div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export const ComparisonTable = () => {
         </div>
 
         <div className="text-center mt-8">
-          <Button variant="hero" size="lg" onClick={scrollToForm}>
+          <Button variant="hero" size="lg" onClick={redirectToPayment}>
             Get Started
           </Button>
         </div>

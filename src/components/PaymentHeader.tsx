@@ -9,7 +9,7 @@ const PaymentHeader = () => {
       </div>
       
       <h1 className="text-3xl font-bold text-foreground mb-3 animate-fade-in" style={{ animationDelay: "0.05s" }}>
-        Websync Monthly
+        Websyncdigital Monthly
         <br />
         <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
           Website Subscription
