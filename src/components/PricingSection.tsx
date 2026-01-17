@@ -27,9 +27,9 @@ export const PricingSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10" ref={ref}>
         <div className="text-center mb-20">
-          <div className={`inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 text-primary text-xs font-black uppercase tracking-[0.2em] px-6 py-3 rounded-full mb-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <Sparkles className="w-4 h-4" />
-            Pricing Plans
+          <div className={`inline-flex items-center gap-2 bg-primary text-white text-xs font-black uppercase tracking-[0.2em] px-6 py-3 rounded-full mb-8 shadow-lg shadow-primary/20 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <Zap className="w-4 h-4 fill-current" />
+            Most Popular
           </div>
           <h2 className={`text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             Simple, Transparent <span className="text-primary italic">Pricing</span>
@@ -48,10 +48,7 @@ export const PricingSection = () => {
 
 
               <div className="mb-10 text-left">
-                <div className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg shadow-primary/20 mb-6">
-                  <Zap className="w-3 h-3 fill-current" />
-                  Most Popular
-                </div>
+
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
                     <ShieldCheck className="w-6 h-6 text-primary" />
