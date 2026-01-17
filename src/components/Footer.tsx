@@ -1,5 +1,5 @@
-import { MessageCircle, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { MessageCircle, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,7 +65,7 @@ export const Footer = () => {
               >
                 Comparison
               </button>
-              <Link to="/resources" className="text-muted-foreground hover:text-primary transition-colors text-left">
+              <Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors text-left">
                 Resources
               </Link>
               <button
@@ -87,7 +87,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <nav className="flex flex-col space-y-3">
-              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
                 Terms & Privacy
               </Link>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

@@ -6,26 +6,26 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Chioma Okafor",
-    role: "Fashion Store Owner",
-    image: "",
+    role: "Founder, Luxe Fabric House (Lagos)",
+    image: "/testimonials/chioma.png",
     initials: "CO",
-    content: "Websyncdigital transformed my fashion business! My new website brought in 5x more customers in just 2 months. Worth every kobo!",
+    content: "I used to rely only on Instagram DMs. Now, my customers in Abuja and Port Harcourt order directly from my website. Websyncdigital made it so easy!",
     rating: 5,
   },
   {
     name: "Tunde Adebayo",
-    role: "Restaurant Owner",
-    image: "",
+    role: "Owner, Naija Spice Kitchen (Ikeja)",
+    image: "/testimonials/tunde.png",
     initials: "TA",
-    content: "I was skeptical at first, but the team delivered exactly what they promised. My restaurant's online orders increased by 300%.",
+    content: "The online food ordering integration is a game changer. We no longer mix up orders during rush hour. Sales are up 300% just like they promised.",
     rating: 5,
   },
   {
     name: "Blessing Eze",
-    role: "Beauty Salon",
-    image: "",
+    role: "Director, Glitz & Glamour Spa (Lekki)",
+    image: "/testimonials/blessing.png",
     initials: "BE",
-    content: "Best decision for my salon! Customers can now book appointments online. The website is beautiful and easy to use.",
+    content: "My clients love the booking feature. No more back-and-forth calls. The site looks premium, just like my salon. Best investment this year!",
     rating: 5,
   },
 ];
@@ -47,7 +47,7 @@ export const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card 
+            <Card
               key={index}
               className={`${isVisible ? 'animate-scale-in' : 'opacity-0'} hover-scale border-border`}
               style={{ animationDelay: `${0.3 + index * 0.1}s` }}
@@ -65,7 +65,7 @@ export const TestimonialsSection = () => {
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-primary text-primary" />

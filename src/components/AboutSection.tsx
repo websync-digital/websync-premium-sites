@@ -263,7 +263,7 @@ export const AboutSection = () => {
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${member.image})` }}
+                  style={{ backgroundImage: `url(${typeof member.image === "string" ? member.image : (member.image as any).src})` }}
                 />
 
                 {/* Dark Gradient Overlay - Lowered for clear faces */}

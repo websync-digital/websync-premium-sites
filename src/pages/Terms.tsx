@@ -1,11 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Shield, Lock, FileText, Scale, Zap, Info, Clock, HandCoins, ArrowLeft } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Terms = () => {
-    const navigate = useNavigate();
+    const router = useRouter();
     const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
 
     return (
@@ -14,7 +14,7 @@ const Terms = () => {
 
             {/* Floating Back Button */}
             <button
-                onClick={() => navigate("/")}
+                onClick={() => router.push("/")}
                 className="fixed left-4 md:left-8 top-28 md:top-32 z-50 p-3 md:p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group shadow-2xl flex items-center gap-3"
             >
                 <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:-translate-x-1 transition-transform" />

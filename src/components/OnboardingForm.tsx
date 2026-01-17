@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -33,7 +34,7 @@ const formSchema = z.object({
   domainPreference: z.string().min(2, "Please specify your domain preference"),
   brandColors: z.string().optional(),
   preferredStyle: z.string().min(1, "Please select a style"),
-  businessGoals: z.string().optional(),
+  businessGoals: z.string().min(10, "Please provide a brief description (at least 10 characters)"),
   deadline: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, "You must agree to continue"),
 });
@@ -44,7 +45,7 @@ export const OnboardingForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { ref, isVisible } = useScrollReveal();
-  const navigate = useNavigate();
+
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -259,7 +260,7 @@ export const OnboardingForm = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-base">
-                      Brief About Business & Goals (Optional)
+                      Brief About Business & Goals <span className="text-destructive">*</span>
                     </FormLabel>
                     <FormControl>
                       <Textarea
@@ -289,7 +290,7 @@ export const OnboardingForm = () => {
                     <div className="space-y-1 leading-none">
                       <FormLabel className="text-sm font-normal cursor-pointer">
                         I agree to Websyncdigital{" "}
-                        <Link to="/terms" target="_blank" className="text-primary hover:underline">
+                        <Link href="/terms" target="_blank" className="text-primary hover:underline">
                           Terms & Privacy
                         </Link>{" "}
                         <span className="text-destructive">*</span>

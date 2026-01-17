@@ -82,7 +82,7 @@ export const PortfolioSection = () => {
               <Card className="bg-[#0D121F]/40 backdrop-blur-xl border border-white/5 group-hover:border-primary/40 transition-all duration-500 rounded-[2rem] overflow-hidden shadow-2xl h-full flex flex-col">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={item.image}
+                    src={typeof item.image === "string" ? item.image : (item.image as any).src}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />

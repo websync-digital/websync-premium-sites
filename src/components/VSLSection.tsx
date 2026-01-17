@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Play, Sparkles, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -8,6 +9,7 @@ const redirectToPayment = () => {
 
 export const VSLSection = () => {
   const { ref, isVisible } = useScrollReveal();
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <section id="video" className="py-32 px-4 relative overflow-hidden bg-[#0d121f] scroll-mt-20">
@@ -43,19 +45,33 @@ export const VSLSection = () => {
 
           <div className="relative bg-[#161B22]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:border-primary/40">
             <div className="relative pt-[56.25%]">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/j50u35dP5II?rel=0&modestbranding=1&textcolor=white"
-                title="Websyncdigital Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
+              {!isPlaying ? (
+                <div
+                  className="absolute inset-0 cursor-pointer group/video"
+                  onClick={() => setIsPlaying(true)}
+                >
+                  <img
+                    src="https://img.youtube.com/vi/j50u35dP5II/maxresdefault.jpg"
+                    alt="Websyncdigital VSL Thumbnail"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover/video:bg-black/10 transition-colors duration-300" />
 
-          {/* Floating Decorative Icon */}
-          <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20 animate-bounce group-hover:scale-110 transition-transform hidden md:flex">
-            <Play className="w-6 h-6 text-white fill-current" />
+                  {/* Big Play Button Overlay */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 backdrop-blur-sm group-hover/video:scale-110 transition-all duration-300">
+                    <Play className="w-8 h-8 text-white fill-current ml-1" />
+                  </div>
+                </div>
+              ) : (
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/j50u35dP5II?autoplay=1&rel=0&modestbranding=1&textcolor=white"
+                  title="Websyncdigital Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )}
+            </div>
           </div>
         </div>
 

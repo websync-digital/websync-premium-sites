@@ -58,7 +58,7 @@ export const HeroSlider = () => {
         >
           <div className="relative w-full h-full overflow-hidden">
             <img
-              src={slide.image}
+              src={typeof slide.image === "string" ? slide.image : (slide.image as any).src}
               alt={slide.alt}
               className="w-full h-full object-cover ken-burns"
               loading={index === 0 ? "eager" : "lazy"}

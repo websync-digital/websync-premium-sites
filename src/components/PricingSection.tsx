@@ -45,14 +45,13 @@ export const PricingSection = () => {
             <div className="bg-[#0D121F]/60 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden transition-all duration-500 group-hover:border-primary/40 group-hover:shadow-primary/10">
 
               {/* Popular badge */}
-              <div className="absolute top-8 right-8">
-                <div className="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg shadow-primary/20 flex items-center gap-2">
+
+
+              <div className="mb-10 text-left">
+                <div className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg shadow-primary/20 mb-6">
                   <Zap className="w-3 h-3 fill-current" />
                   Most Popular
                 </div>
-              </div>
-
-              <div className="mb-10 text-left">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
                     <ShieldCheck className="w-6 h-6 text-primary" />

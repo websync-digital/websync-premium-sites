@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Loader2, User, Mail, Phone, Building2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -187,7 +187,7 @@ const CustomerForm = () => {
 
       <p className="text-xs text-muted-foreground text-center mt-6">
         By proceeding, you agree to our{" "}
-        <Link to="/terms" target="_blank" className="text-primary hover:underline font-medium">
+        <Link href="/terms" target="_blank" className="text-primary hover:underline font-medium">
           Terms of Service & Privacy Policy
         </Link>
       </p>

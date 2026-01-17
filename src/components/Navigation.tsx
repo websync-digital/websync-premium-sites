@@ -10,9 +10,13 @@ const navLinks = [
   { name: "Resources", href: "/resources" },
 ];
 
+import { useRouter } from "next/navigation";
+// ... imports
+
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +34,7 @@ export const Navigation = () => {
 
   const handleNavClick = (href: string) => {
     if (href.startsWith('/')) {
-      window.location.href = href;
+      router.push(href);
     } else {
       const element = document.querySelector(href);
       element?.scrollIntoView({ behavior: "smooth" });
