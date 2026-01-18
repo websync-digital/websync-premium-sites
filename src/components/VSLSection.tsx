@@ -87,7 +87,7 @@ export const VSLSection = () => {
 
           <div className="mt-6 flex items-center justify-center gap-2 text-white/30 text-sm font-medium">
             <Sparkles className="w-4 h-4" />
-            Join 50+ businesses already growing with Websyncdigital
+            Join  businesses already growing with Websyncdigital
           </div>
         </div>
       </div>
