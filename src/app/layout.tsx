@@ -27,8 +27,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Websyncdigital",
-            "url": "https://websyncdigital.com",
-            "logo": "https://websyncdigital.com/favicon.png",
+            "url": "https://websyncdigital.com.ng",
+            "logo": "https://websyncdigital.com.ng/favicon.png",
             "sameAs": [
                 "https://facebook.com/websyncdigital",
                 "https://twitter.com/websyncdigital",
@@ -47,7 +47,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Websyncdigital",
-            "image": "https://websyncdigital.com/favicon.png",
+            "image": "https://websyncdigital.com.ng/favicon.png",
             "telephone": "+2347043576814",
             "email": "digitalwebsync@gmail.com",
             "address": {
@@ -64,7 +64,7 @@ export default function RootLayout({
                 { "@type": "City", "name": "Awka" },
                 { "@type": "State", "name": "Anambra" }
             ],
-            "url": "https://websyncdigital.com"
+            "url": "https://websyncdigital.com.ng"
         },
         {
             "@context": "https://schema.org",
@@ -128,7 +128,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "Websyncdigital",
-            "url": "https://websyncdigital.com",
+            "url": "https://websyncdigital.com.ng",
             "description": "Premium Websites. One Small Monthly Fee. Built and managed by Vibe Coders.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "All",
@@ -138,10 +138,10 @@ export default function RootLayout({
                 "priceCurrency": "NGN"
             },
             "potentialAction": [
-                { "@type": "ViewAction", "name": "Pricing Plans", "target": "https://websyncdigital.com/#pricing" },
-                { "@type": "ViewAction", "name": "How It Works", "target": "https://websyncdigital.com/#how-it-works" },
-                { "@type": "ViewAction", "name": "Portfolio", "target": "https://websyncdigital.com/#portfolio" },
-                { "@type": "ViewAction", "name": "About Us", "target": "https://websyncdigital.com/#about" }
+                { "@type": "ViewAction", "name": "Pricing Plans", "target": "https://websyncdigital.com.ng/#pricing" },
+                { "@type": "ViewAction", "name": "How It Works", "target": "https://websyncdigital.com.ng/#how-it-works" },
+                { "@type": "ViewAction", "name": "Portfolio", "target": "https://websyncdigital.com.ng/#portfolio" },
+                { "@type": "ViewAction", "name": "About Us", "target": "https://websyncdigital.com.ng/#about" }
             ]
         }
     ];
