@@ -99,7 +99,7 @@ export const AboutSection = () => {
             About Vibe Coders
           </div>
 
-          <h1 className={`text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight ${heroVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <h1 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight ${heroVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             We Build Websites That
             <span className="block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent italic">
               Grow Businesses
@@ -147,7 +147,7 @@ export const AboutSection = () => {
                 Our Mission
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
                 Empowering Nigerian Businesses
                 <span className="text-primary italic ml-2">Digitally</span>
               </h2>
@@ -197,7 +197,7 @@ export const AboutSection = () => {
               Our Core Values
             </div>
 
-            <h2 className={`text-4xl md:text-6xl font-black mb-6 text-white tracking-tighter ${valuesVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-6xl font-black mb-6 text-white tracking-tighter ${valuesVisible ? 'animate-slide-up' : 'opacity-0'}`}>
               What Drives <span className="text-primary italic">Everything We Do</span>
             </h2>
 
@@ -247,7 +247,7 @@ export const AboutSection = () => {
               Meet the Founders
             </div>
 
-            <h2 className={`text-4xl md:text-5xl font-bold mb-4 text-white ${teamVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white ${teamVisible ? 'animate-slide-up' : 'opacity-0'}`}>
               The Visionaries Behind
               <span className="text-primary italic ml-3">Websyncdigital</span>
             </h2>
@@ -309,7 +309,7 @@ export const AboutSection = () => {
           {/* Shared Founders Mission Statement */}
           <div className={`mt-20 text-center max-w-3xl mx-auto ${teamVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
             <div className="inline-block p-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent mb-8 w-full" />
-            <p className="text-xl md:text-2xl text-white/70 font-medium leading-relaxed italic tracking-tight">
+            <p className="text-lg md:text-2xl text-white/70 font-medium leading-relaxed italic tracking-tight">
               "The founders of Websyncdigital's mission is to develop solutions for Nigerians and Africans as they brainstorm and build new platforms and technologies in the web space."
             </p>
             <div className="mt-6 flex items-center justify-center gap-4 text-primary font-bold uppercase tracking-widest text-xs">
@@ -330,7 +330,7 @@ export const AboutSection = () => {
               Why Choose Us
             </div>
 
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 text-white ${whyVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white ${whyVisible ? 'animate-slide-up' : 'opacity-0'}`}>
               Not Just Another
               <span className="block mt-2 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent italic">
                 Web Agency

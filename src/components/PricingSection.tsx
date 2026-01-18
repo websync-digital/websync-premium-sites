@@ -31,7 +31,7 @@ export const PricingSection = () => {
             <Zap className="w-4 h-4 fill-current" />
             Most Popular
           </div>
-          <h2 className={`text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             Simple, Transparent <span className="text-primary italic">Pricing</span>
           </h2>
           <p className={`text-xl text-white/60 max-w-2xl mx-auto leading-relaxed ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
@@ -55,8 +55,8 @@ export const PricingSection = () => {
                   </div>
                   The Websyncdigital Pro
                 </h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-7xl font-black text-white tracking-tighter">₦6,999</span>
+                <div className="flex items-baseline flex-wrap gap-2">
+                  <span className="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter">₦6,999</span>
                   <span className="text-white/40 font-bold uppercase tracking-widest text-xs">/ Month</span>
                 </div>
                 <div className="h-1 w-20 bg-primary rounded-full mt-6" />

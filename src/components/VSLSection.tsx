@@ -28,7 +28,7 @@ export const VSLSection = () => {
             Watch Our Magic
           </div>
 
-          <h2 className={`text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             See How Websyncdigital <span className="text-primary italic">Transforms</span> Your Business
           </h2>
 

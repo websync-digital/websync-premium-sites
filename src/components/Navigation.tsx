@@ -103,7 +103,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 mt-4 mx-0 md:hidden p-6 rounded-[2rem] bg-[#0d121f]/95 backdrop-blur-3xl border border-white/10 animate-scale-in">
+          <div className="absolute top-full left-0 right-0 mt-4 mx-4 md:hidden p-6 rounded-[2.5rem] bg-[#0d121f]/98 backdrop-blur-3xl border border-white/10 animate-scale-in shadow-2xl">
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
                 <button

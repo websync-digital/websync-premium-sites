@@ -60,41 +60,43 @@ export const ComparisonTable = () => {
           </p>
         </div>
 
-        <div className={`bg-card rounded-xl overflow-hidden border border-border ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-          {/* Header */}
-          <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
-            <div className="p-4 font-semibold">Feature</div>
-            <div className="p-4 text-center font-semibold text-muted-foreground">Traditional</div>
-            <div className="p-4 text-center font-semibold text-primary">Websyncdigital</div>
-          </div>
+        <div className={`overflow-x-auto pb-4 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+          <div className="bg-card rounded-xl overflow-hidden border border-border min-w-[600px] md:min-w-0">
+            {/* Header */}
+            <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
+              <div className="p-4 font-semibold text-sm md:text-base">Feature</div>
+              <div className="p-4 text-center font-semibold text-muted-foreground text-sm md:text-base">Traditional</div>
+              <div className="p-4 text-center font-semibold text-primary text-sm md:text-base">Websyncdigital</div>
+            </div>
 
-          {/* Rows */}
-          {comparisonData.map((row, index) => {
-            const Icon = row.icon;
-            return (
-              <div
-                key={index}
-                className={`grid grid-cols-3 ${index !== comparisonData.length - 1 ? "border-b border-border/50" : ""}`}
-              >
-                <div className="p-4 flex items-center gap-3">
-                  <Icon className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm">{row.feature}</span>
-                </div>
-                <div className="p-4 text-center">
-                  <div className="flex items-center justify-center gap-2">
-                    <X className="w-4 h-4 text-destructive" />
-                    <span className="text-sm text-muted-foreground">{row.traditional}</span>
+            {/* Rows */}
+            {comparisonData.map((row, index) => {
+              const Icon = row.icon;
+              return (
+                <div
+                  key={index}
+                  className={`grid grid-cols-3 ${index !== comparisonData.length - 1 ? "border-b border-border/50" : ""}`}
+                >
+                  <div className="p-4 flex items-center gap-3">
+                    <Icon className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm">{row.feature}</span>
+                  </div>
+                  <div className="p-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <X className="w-4 h-4 text-destructive" />
+                      <span className="text-sm text-muted-foreground">{row.traditional}</span>
+                    </div>
+                  </div>
+                  <div className="p-4 text-center bg-primary/5">
+                    <div className="flex items-center justify-center gap-2">
+                      <Check className="w-4 h-4 text-primary" />
+                      <span className="text-sm font-medium">{row.Websyncdigital}</span>
+                    </div>
                   </div>
                 </div>
-                <div className="p-4 text-center bg-primary/5">
-                  <div className="flex items-center justify-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium">{row.Websyncdigital}</span>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         <div className="text-center mt-8">
