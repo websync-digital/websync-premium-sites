@@ -2138,7 +2138,7 @@ const VSLSection = ()=>{
                                         lineNumber: 89,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    "Join 50+ businesses already growing with Websyncdigital"
+                                    "Join  businesses already growing with Websyncdigital"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/VSLSection.tsx",
