@@ -143,6 +143,17 @@ export const Footer = () => {
             <p className="text-muted-foreground/60 text-xs mt-2 md:mt-0">
               Proudly serving businesses in <span className="text-primary/80">Anambra</span>, <span className="text-primary/80">Lagos</span>, <span className="text-primary/80">Abuja</span>, & <span className="text-primary/80">Port Harcourt</span>.
             </p>
+            <p className="text-muted-foreground/60 text-xs mt-2 md:mt-0">
+              Built and Powered by{' '}
+              <a
+                href="https://www.websyncdigital.com.ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary/80 hover:underline"
+              >
+                WebsyncDigital
+              </a>
+            </p>
           </div>
         </div>
       </div>
