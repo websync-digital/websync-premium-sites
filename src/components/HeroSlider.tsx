@@ -37,11 +37,14 @@ export const HeroSlider = () => {
   };
 
   const redirectToPayment = () => {
-    window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+    const phoneNumber = "2349111719701";
+    const message = "Hi, I'd like to get started with Websyncdigital";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = "+2347043576814"; // Replace with actual WhatsApp number
+    const phoneNumber = "2349111719701"; // Replace with actual WhatsApp number
     const message = "Hi, I'd like to know more about Websyncdigital";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -76,7 +79,7 @@ export const HeroSlider = () => {
             Premium Websites. One Small Monthly Fee.
           </h1>
           <p className="text-lg md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-            Get a luxury-level website for just ₦6,999/month. Built and managed by our Vibe Coders team.
+            Get a luxury-level website for just ₦9,999/month. Built and managed by our Vibe Coders team.
             You own your domain — we handle everything else.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
@@ -86,7 +89,7 @@ export const HeroSlider = () => {
               className="text-lg px-12 py-7 h-auto animate-fade-in bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary border-none shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-500"
               onClick={redirectToPayment}
             >
-              Get Started for ₦6,999/month
+              Get Started for ₦9,999/month
             </Button>
             <Button
               size="lg"

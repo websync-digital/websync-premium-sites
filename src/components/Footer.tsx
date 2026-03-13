@@ -4,7 +4,10 @@ import Link from "next/link";
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   const redirectToPayment = () => {
-    window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+    const phoneNumber = "2349111719701";
+    const message = "Hi, I'd like to get started with Websyncdigital";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -111,14 +114,14 @@ export const Footer = () => {
                 <span>digitalwebsync@gmail.com</span>
               </a>
               <a
-                href="tel:+2347043576814"
+                href="tel:+2349111719701"
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span>+2347043576814</span>
+                <span>+234 911 171 9701</span>
               </a>
               <a
-                href="https://wa.me/2347043576814"
+                href="https://wa.me/2349111719701"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-primary hover:text-primary-hover transition-colors font-medium group"

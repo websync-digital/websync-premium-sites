@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const redirectToPayment = () => {
-  window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+  const phoneNumber = "2349111719701";
+  const message = "Hi, I'd like to get started with Websyncdigital";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
 };
 
 export const VSLSection = () => {
@@ -33,7 +36,7 @@ export const VSLSection = () => {
           </h2>
 
           <p className={`text-xl text-white/50 max-w-3xl mx-auto leading-relaxed ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            Watch this short video to learn how you can get a premium website for just <span className="text-white font-bold">₦6,999/month</span> —
+            Watch this short video to learn how you can get a premium website for just <span className="text-white font-bold">₦9,999/month</span> —
             no hidden fees, no stress, just results.
           </p>
         </div>

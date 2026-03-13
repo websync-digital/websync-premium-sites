@@ -4,15 +4,15 @@ import { Providers } from "./providers";
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-    title: "Websyncdigital | Launch Your Premium Business Website for ₦6,999",
-    description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦6,999/month. No setup fees. Live in 7–14 days.",
+    title: "Websyncdigital | Launch Your Premium Business Website for ₦9,999",
+    description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦9,999/month. No setup fees. Live in 7–14 days.",
     authors: [{ name: "Websyncdigital" }],
     icons: {
         icon: "/favicon.png",
     },
     openGraph: {
-        title: "Websyncdigital | Launch Your Premium Business Website for ₦6,999",
-        description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦6,999/month. No setup fees. Live in 7–14 days.",
+        title: "Websyncdigital | Launch Your Premium Business Website for ₦9,999",
+        description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦9,999/month. No setup fees. Live in 7–14 days.",
         type: "website",
     },
 };
@@ -38,7 +38,7 @@ export default function RootLayout({
             ],
             "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+2347043576814",
+                "telephone": "+2349111719701",
                 "contactType": "customer service",
                 "areaServed": ["NG", "Lagos", "Abuja", "Port Harcourt", "Anambra"],
                 "availableLanguage": "English"
@@ -49,7 +49,7 @@ export default function RootLayout({
             "@type": "LocalBusiness",
             "name": "Websyncdigital",
             "image": "https://websyncdigital.com.ng/favicon.png",
-            "telephone": "+2347043576814",
+            "telephone": "+2349111719701",
             "email": "digitalwebsync@gmail.com",
             "address": {
                 "@type": "PostalAddress",
@@ -57,7 +57,7 @@ export default function RootLayout({
                 "addressRegion": "Anambra",
                 "addressCountry": "NG"
             },
-            "priceRange": "₦6,999/month",
+            "priceRange": "₦9,999/month",
             "areaServed": [
                 { "@type": "City", "name": "Lagos" },
                 { "@type": "City", "name": "Abuja" },
@@ -135,7 +135,7 @@ export default function RootLayout({
             "operatingSystem": "All",
             "offers": {
                 "@type": "Offer",
-                "price": "6999.00",
+                "price": "9999.00",
                 "priceCurrency": "NGN"
             },
             "potentialAction": [

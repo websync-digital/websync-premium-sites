@@ -71,12 +71,15 @@ export const OnboardingForm = () => {
 
     console.log("Form data:", data);
 
-    toast.success("Form submitted successfully! Redirecting to payment...");
+    toast.success("Form submitted successfully! Redirecting to WhatsApp...");
     setIsSubmitting(false);
 
-    // Redirect to Paystack payment link after a brief delay
+    // Redirect to WhatsApp instead of Paystack
     setTimeout(() => {
-      window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+      const phoneNumber = "2349111719701";
+      const message = "Hi, I've just submitted the onboarding form for Websyncdigital";
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
     }, 1000);
   };
 
@@ -308,7 +311,7 @@ export const OnboardingForm = () => {
                 className="w-full text-lg py-6"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Processing..." : "Proceed to Payment"}
+                {isSubmitting ? "Processing..." : "Submit via WhatsApp"}
               </Button>
             </form>
           </Form>

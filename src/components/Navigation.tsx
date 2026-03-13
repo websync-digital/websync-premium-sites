@@ -28,7 +28,10 @@ export const Navigation = () => {
   }, []);
 
   const redirectToPayment = () => {
-    window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+    const phoneNumber = "2349111719701";
+    const message = "Hi, I'd like to get started with Websyncdigital";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
     setIsMobileMenuOpen(false);
   };
 

@@ -10,14 +10,14 @@ const Resources = () => {
     const guides = [
         {
             category: "Growth Strategy",
-            title: "How to Scale a Small Business in Africa with ₦7,000",
+            title: "How to Scale a Small Business in Africa with ₦9,999",
             description: "A comprehensive guide to digital leverage, low-cost marketing, and automated systems for Nigerian entrepreneurs.",
             icon: TrendingUp
         },
         {
             category: "Tech Infrastructure",
             title: "Compare Nigerian Payment Gateways in 2026",
-            description: "Paystack vs. Monnify vs. Flutterwave. Which one offers the best rates and reliability for your business?",
+            description: "Monnify vs. Flutterwave. Which one offers the best rates and reliability for your business?",
             icon: Globe
         },
         {

@@ -2,14 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Target, Heart, Zap, Award, Users, Sparkles, TrendingUp, Globe, Clock, Star, Quote } from "lucide-react";
+import { Target, Heart, Zap, Award, Users, Sparkles, TrendingUp, Globe, Clock, Star, Quote, HeadphonesIcon, Rocket } from "lucide-react";
 
 // Import profile images
 import westProfileImage from "@/assets/gallery/west_profile_updated.jpg";
 import nworahEbukaProfileImage from "@/assets/gallery/nworah-ebuka-augustus.jpg";
 
 const stats = [
-  { number: "50+", label: "Websites Built", icon: Globe },
+  { number: "100+", label: "Websites Built", icon: Globe },
   { number: "98%", label: "Client Satisfaction", icon: Star },
   { number: "7-14", label: "Days to Launch", icon: Clock },
   { number: "24/7", label: "Support Available", icon: Users },
@@ -288,16 +288,16 @@ export const AboutSection = () => {
                         </p>
                         {member.link && (
                           <a
-                          href={member.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1 mt-2 text-white/50 hover:text-primary transition-colors duration-300 text-xs font-medium group-hover:text-primary/80"
+                            href={member.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 mt-2 text-white/50 hover:text-primary transition-colors duration-300 text-xs font-medium group-hover:text-primary/80"
                           >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link w-3 h-3 flex-shrink-0"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                          Visit Profile
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link w-3 h-3 flex-shrink-0"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg>
+                            Visit Profile
                           </a>
                         )}
-                        
+
                       </div>
                     </div>
                   </div>

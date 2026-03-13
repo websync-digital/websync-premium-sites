@@ -14,7 +14,10 @@ const features = [
 ];
 
 const redirectToPayment = () => {
-  window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+  const phoneNumber = "2349111719701";
+  const message = "Hi, I'd like to get started with the Websyncdigital Pro plan";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
 };
 
 export const PricingSection = () => {
@@ -56,7 +59,7 @@ export const PricingSection = () => {
                   The Websyncdigital Pro
                 </h3>
                 <div className="flex items-baseline flex-wrap gap-2">
-                  <span className="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter">₦6,999</span>
+                  <span className="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter">₦9,999</span>
                   <span className="text-white/40 font-bold uppercase tracking-widest text-xs">/ Month</span>
                 </div>
                 <div className="h-1 w-20 bg-primary rounded-full mt-6" />

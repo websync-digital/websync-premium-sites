@@ -7,7 +7,7 @@ const comparisonData = [
     feature: "Upfront Cost",
     icon: Zap,
     traditional: "₦300,000 - ₦500,000",
-    Websyncdigital: "₦6,999/month",
+    Websyncdigital: "₦9,999/month",
   },
   {
     feature: "Time to Launch",
@@ -22,7 +22,7 @@ const comparisonData = [
     Websyncdigital: "Free unlimited",
   },
   {
-    feature: "Hosting",
+    feature: "Hosting/free domain name",
     icon: Rocket,
     traditional: "₦50,000+/year extra",
     Websyncdigital: "Included free",
@@ -42,7 +42,10 @@ const comparisonData = [
 ];
 
 const redirectToPayment = () => {
-  window.open("https://paystack.shop/pay/fk5vg2pd9m", "_blank");
+  const phoneNumber = "2349111719701";
+  const message = "Hi, I'd like to get started with Websyncdigital";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
 };
 
 export const ComparisonTable = () => {

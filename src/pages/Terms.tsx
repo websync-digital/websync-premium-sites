@@ -117,7 +117,7 @@ const Terms = () => {
                                 2. Privacy & Data
                             </h3>
                             <p className="text-white/60 leading-relaxed">
-                                We respect your data. Your business information and client leads generated through the website are strictly yours. We never share your data with third parties. Payments are handled securely through Paystack/Monnify; we do not store your card details.
+                                We respect your data. Your business information and client leads generated through the website are strictly yours. We never share your data with third parties. Payments are handled securely through Monnify; we do not store your card details.
                             </p>
                         </div>
 
