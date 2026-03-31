@@ -1,167 +1,76 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Providers } from "./providers";
-import { Analytics } from '@vercel/analytics/next';
+import { Providers } from "@/components/providers";
+import SchemaOrg from "@/components/SchemaOrg";
+import "../index.css";
 
 export const metadata: Metadata = {
-    title: "Websyncdigital | Launch Your Premium Business Website for ₦9,999",
-    description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦9,999/month. No setup fees. Live in 7–14 days.",
-    authors: [{ name: "Websyncdigital" }],
-    icons: {
-        icon: "/favicon.png",
+  title: "WebSync Digital | Best Web Design Agency in Nigeria | ₦9,999/Month",
+  description: "WebSync Digital is Nigeria's top tech agency for SMEs. Get a premium, bespoke website for just ₦9,999/month with zero setup fees. Fast 7-day launch by CEO West & COO King Austin.",
+  keywords: [
+    "WebSync Digital", "WebSync Nigeria", "Best Web Design Agency Nigeria", 
+    "₦9,999 Website Nigeria", "Affordable Web Design Lagos", "West CEO WebSync", 
+    "King Austin COO WebSync", "Nwora Ebuka", "SME Digital Marketing Nigeria",
+    "Elite Web Development Lagos", "Mono Secured Payments Nigeria", "Fast Launch Website",
+    "Top Web Developers in Nigeria", "Software Engineering Agency Lagos", "SaaS Builders Nigeria",
+    "Web Designers in Anambra", "Tech Companies in Awka", "Digital Agency Port Harcourt",
+    "Website Creator Nigeria", "Web Development Subscription Nigeria", "Monthly Website Plan Nigeria",
+    "Secure Payment Gateway Integration Nigeria", "React JS Developers Nigeria", "Next JS Developers Lagos",
+    "Custom Web Applications Nigeria", "WebSync Digital Reviews", "Hire Nigerian Web Developer",
+    "Web Design Packages for Startups", "Best IT Firm in Nigeria", "E-commerce Experts Lagos",
+    "Web Design Services Nigeria", "Website Management Nigeria", "Digital Presence Nigerian Business",
+    "Web App Development Nigeria", "Website Security Services Nigeria", "Google Ranking Agency Lagos",
+    "Corporate Website Design Nigeria", "Best Website Builders in Africa", "Tech Startups in Nigeria",
+    "Web Agency for Nigerian SMEs", "Fast Loading Website Nigeria", "WebSync Tech",
+    "Nigerian Founders Web Solutions", "Custom Software Development Nigeria", "Website Maintenance Services Lagos",
+    "Domain and Hosting Nigeria", "Web Design Consultancy Nigeria", "B2B Web Design Nigeria",
+    "Creative Web Agency Nigeria", "Web Developers in Onitsha", "Web Solutions for African Businesses"
+  ],
+  authors: [{ name: "WebSync Digital Team", url: "https://websyncdigital.com.ng" }],
+  metadataBase: new URL("https://websyncdigital.com.ng"),
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "WebSync Digital | Elite Web Design for Nigerian SMEs",
+    description: "Transform your business with a premium digital presence for only ₦9,999 monthly. No setup fees. Powered by West & King Austin.",
+    url: "https://websyncdigital.com.ng",
+    siteName: "WebSync Digital",
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WebSync Digital | #1 Tech Agency for Nigerian Businesses",
+    description: "Get an elite website for ₦9,999/month. Zero setup fees. 100% Secure via Mono.",
+    creator: "@websyncdigital",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-    openGraph: {
-        title: "Websyncdigital | Launch Your Premium Business Website for ₦9,999",
-        description: "Scale your business with a luxury website designed and managed by Vibe Coders. Get professional hosting and 24/7 support for just ₦9,999/month. No setup fees. Live in 7–14 days.",
-        type: "website",
-    },
+  },
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    // Schema data from original index.html
-    const schemaData = [
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Websyncdigital",
-            "url": "https://websyncdigital.com.ng",
-            "logo": "https://websyncdigital.com.ng/favicon.png",
-            "sameAs": [
-                "https://facebook.com/websyncdigital",
-                "https://twitter.com/websyncdigital",
-                "https://instagram.com/websyncdigital",
-                "https://linkedin.com/company/websyncdigital"
-            ],
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+2349111719701",
-                "contactType": "customer service",
-                "areaServed": ["NG", "Lagos", "Abuja", "Port Harcourt", "Anambra"],
-                "availableLanguage": "English"
-            }
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Websyncdigital",
-            "image": "https://websyncdigital.com.ng/favicon.png",
-            "telephone": "+2349111719701",
-            "email": "digitalwebsync@gmail.com",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Awka",
-                "addressRegion": "Anambra",
-                "addressCountry": "NG"
-            },
-            "priceRange": "₦9,999/month",
-            "areaServed": [
-                { "@type": "City", "name": "Lagos" },
-                { "@type": "City", "name": "Abuja" },
-                { "@type": "City", "name": "Port Harcourt" },
-                { "@type": "City", "name": "Awka" },
-                { "@type": "State", "name": "Anambra" }
-            ],
-            "url": "https://websyncdigital.com.ng"
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "West",
-            "jobTitle": "Founder & CEO",
-            "affiliation": {
-                "@type": "Organization",
-                "name": "Websyncdigital"
-            }
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "King Austin",
-            "jobTitle": "Co-Founder & COO",
-            "affiliation": {
-                "@type": "Organization",
-                "name": "Websyncdigital"
-            }
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Will Websyncdigital have access to my money?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No. Websyncdigital only receives your subscription payment after you authorize it securely through your bank."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Why do I need to verify with BVN?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "BVN is used only to confirm identity. It cannot be used to debit your account."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Will this debit my account automatically?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes — once monthly for your subscription, until you cancel."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is my bank supported?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "All major Nigerian banks supported by Monnify."
-                    }
-                }
-            ]
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Websyncdigital",
-            "url": "https://websyncdigital.com.ng",
-            "description": "Premium Websites. One Small Monthly Fee. Built and managed by Vibe Coders.",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "All",
-            "offers": {
-                "@type": "Offer",
-                "price": "9999.00",
-                "priceCurrency": "NGN"
-            },
-            "potentialAction": [
-                { "@type": "ViewAction", "name": "Pricing Plans", "target": "https://websyncdigital.com.ng/#pricing" },
-                { "@type": "ViewAction", "name": "How It Works", "target": "https://websyncdigital.com.ng/#how-it-works" },
-                { "@type": "ViewAction", "name": "Portfolio", "target": "https://websyncdigital.com.ng/#portfolio" },
-                { "@type": "ViewAction", "name": "About Us", "target": "https://websyncdigital.com.ng/#about" }
-            ]
-        }
-    ];
-
-    return (
-        <html lang="en">
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-                />
-            </head>
-            <body className="font-sans antialiased">
-                <Providers>{children}</Providers>
-                <Analytics />
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body>
+        <SchemaOrg />
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }

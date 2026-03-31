@@ -1,7 +1,11 @@
-"use client";
+import { Metadata } from 'next';
+import TermsContent from './TermsContent';
 
-import Terms from "@/pages/Terms";
+export const metadata: Metadata = {
+  title: 'Terms of Service | WebSync Digital',
+  description: 'Terms of service and subscription agreements for WebSync Digital. Read our usage rights, pricing models, and service launch terms.',
+};
 
-export default function TermsPage() {
-    return <Terms />;
+export default function Page() {
+  return <TermsContent />;
 }
