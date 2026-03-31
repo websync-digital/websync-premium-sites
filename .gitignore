@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 .next
 git_status_output.txt
+.agent/

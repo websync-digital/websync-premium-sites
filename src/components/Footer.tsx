@@ -1,165 +1,120 @@
-import { MessageCircle, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from "lucide-react";
-import Link from "next/link";
+"use client";
 
-export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  const redirectToPayment = () => {
-    const phoneNumber = "2349111719701";
-    const message = "Hi, I'd like to get started with Websyncdigital";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
+import Image from 'next/image';
+import logo from '@/assets/logo.png';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
+const Footer = () => {
   return (
-    <footer className="bg-secondary/20 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary mb-4">Websyncdigital</h3>
-            <p className="text-muted-foreground">
-              Premium Websites. One Small Monthly Fee. Built and managed by Vibe Coders.
+    <footer className="pt-20 pb-10 bg-[#050505] text-white overflow-hidden border-t border-white/5">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
+          
+          {/* Brand Info */}
+          <div className="space-y-6">
+            <Link href="/#hero" className="inline-block transition-transform hover:scale-105">
+              <Image
+                src={logo}
+                alt="WebSync Digital Logo"
+                width={120}
+                height={30}
+                className="h-7 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
+            <p className="text-sm text-white/50 font-body leading-relaxed max-w-[240px]">
+              We transform bold ideas into exceptional brands and sales-driven digital platforms. 
+              Only ₦9,999 monthly. No setup fees.
             </p>
-            <div className="flex gap-4 pt-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary key hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+            <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded-full border border-white/10 w-fit">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-[10px] uppercase font-bold tracking-widest text-white/70">CAC Verified Entity</span>
             </div>
+          </div>
+
+          {/* Solution Links */}
+          <div className="space-y-6">
+            <h4 className="text-sm font-display font-bold uppercase tracking-[0.2em] text-primary">WebSync Solutions</h4>
+            <ul className="space-y-4">
+              {['Bespoke Premium Design', 'Unlimited Free Updates', 'Enterprise-Grade SEO', 'Monthly Maintenance'].map((item) => (
+                <li key={item}>
+                  <a href="#pricing" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <nav className="flex flex-col space-y-3">
-              <button
-                onClick={() => document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth" })}
-                className="text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                How It Works
-              </button>
-              <button
-                onClick={() => document.querySelector("#comparison")?.scrollIntoView({ behavior: "smooth" })}
-                className="text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                Comparison
-              </button>
-              <Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors text-left">
-                Resources
-              </Link>
-              <button
-                onClick={() => document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" })}
-                className="text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                Pricing
-              </button>
-              <button
-                onClick={redirectToPayment}
-                className="text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                Get Started
-              </button>
-            </nav>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
-            <nav className="flex flex-col space-y-3">
-              <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms & Privacy
-              </Link>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Refund Policy
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Cookie Policy
-              </a>
-            </nav>
+          <div className="space-y-6">
+            <h4 className="text-sm font-display font-bold uppercase tracking-[0.2em] text-white/30 text-primary/0">Company</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link href="/#pricing" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">Select Your Plan</Link>
+              </li>
+              <li>
+                <Link href="/#metrics" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">Success Stories</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">Our Blog</Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body">Terms of Service</Link>
+              </li>
+            </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <div className="space-y-4">
-              <a
-                href="mailto:digitalwebsync@gmail.com"
-                className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span>digitalwebsync@gmail.com</span>
-              </a>
-              <a
-                href="tel:+2349111719701"
-                className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span>+234 911 171 9701</span>
-              </a>
-              <a
-                href="https://wa.me/2349111719701"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 text-primary hover:text-primary-hover transition-colors font-medium group"
-              >
-                <MessageCircle className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span>WhatsApp Support</span>
-              </a>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>Lagos, Nigeria</span>
-              </div>
-            </div>
+          <div className="space-y-6">
+             <h4 className="text-sm font-display font-bold uppercase tracking-[0.2em] text-primary">Get in Touch</h4>
+             <ul className="space-y-4">
+                <li>
+                  <a href="mailto:digitalwebsync@gmail.com" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body block">
+                    digitalwebsync@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/2349111719701" target="_blank" rel="noopener noreferrer" className="text-sm text-white/40 hover:text-white transition-colors duration-300 font-body block font-bold text-primary">
+                    WhatsApp: Chat with our Team
+                  </a>
+                </li>
+             </ul>
+             <div className="pt-4">
+               <span className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-medium">Headquarters: Nigeria 🇳🇬</span>
+             </div>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground">
-              &copy; {currentYear} Websyncdigital. All rights reserved.
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <p className="text-[11px] text-white/30 font-body tracking-widest uppercase">
+              © {new Date().getFullYear()} WebSync Digital. All rights reserved.
             </p>
-            <p className="text-muted-foreground/60 text-xs mt-2 md:mt-0">
-              Proudly serving businesses in <span className="text-primary/80">Anambra</span>, <span className="text-primary/80">Lagos</span>, <span className="text-primary/80">Abuja</span>, & <span className="text-primary/80">Port Harcourt</span>.
-            </p>
-            <p className="text-muted-foreground/60 text-xs mt-2 md:mt-0">
-              Built and Powered by{' '}
-              <a
-                href="https://www.websyncdigital.com.ng"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary/80 hover:underline"
-              >
-                WebsyncDigital
-              </a>
-            </p>
+            <div className="flex items-center gap-4 border-l border-white/10 pl-6 hidden md:flex">
+              <Link href="/privacy" className="text-[10px] text-white/20 hover:text-white uppercase tracking-widest transition-colors font-medium">Privacy Policy</Link>
+              <Link href="/terms" className="text-[10px] text-white/20 hover:text-white uppercase tracking-widest transition-colors font-medium">Terms of Service</Link>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <span className="text-[11px] text-white/20 font-body tracking-[0.2em] uppercase italic">
+              Empowering Nigerian SMEs with World-Class Digital Assets.
+            </span>
+          </div>
+          {/* Mobile Legal Links */}
+          <div className="flex items-center gap-6 md:hidden">
+            <Link href="/privacy" className="text-[10px] text-white/20 uppercase tracking-widest font-medium">Privacy Policy</Link>
+            <Link href="/terms" className="text-[10px] text-white/20 uppercase tracking-widest font-medium">Terms of Service</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;

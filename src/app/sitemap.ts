@@ -1,36 +1,29 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { allBlogPosts } from '@/data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://websyncdigital.com.ng';
+  
+  const posts = allBlogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     {
-      url: 'https://websyncdigital.com.ng',
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://websyncdigital.com.ng/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://websyncdigital.com.ng/pricing',
+      url: `${baseUrl}/west`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    {
-      url: 'https://websyncdigital.com.ng/resources',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://websyncdigital.com.ng/terms',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-  ]
+    ...posts,
+  ];
 }
