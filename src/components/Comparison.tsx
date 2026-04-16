@@ -35,7 +35,7 @@ const comparisonData = [
   },
   {
     feature: "Security Framework",
-    websync: "Bank-Grade (Mono Secured)",
+    websync: "PCI DSS (Paystack Secured)",
     traditional: "Basic SSL / High Vulnerability",
     websyncIcon: <Shield className="text-green-500" size={18} />,
     traditionalIcon: <X className="text-red-500" size={18} />,

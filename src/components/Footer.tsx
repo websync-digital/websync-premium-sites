@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import logo from '@/assets/logo.png';
+import logo from '../../public/assets/logo.png';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded-full border border-white/10 w-fit">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-[10px] uppercase font-bold tracking-widest text-white/70">CAC Verified Entity</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-white/70">CAC Verified: RC 9470161</span>
             </div>
           </div>
 

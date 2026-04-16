@@ -3,15 +3,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import westProfile from "@/assets/west_profile_updated.jpg";
-import austinProfile from "@/assets/nworah-ebuka-augustus.jpg";
+import westProfile from "../../public/assets/west_profile_updated.jpg";
+import austinProfile from "../../public/assets/nworah-ebuka-augustus.jpg";
 
 const Visionary = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="founders" className="py-24 md:py-32 lg:py-40 bg-background overflow-hidden">
+    <section id="vision" className="py-24 md:py-32 lg:py-40 bg-background overflow-hidden">
       <div className="container-custom">
         <div ref={ref} className="max-w-4xl mx-auto text-center">
           

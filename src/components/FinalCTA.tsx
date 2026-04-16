@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
-import ctaImage from '@/assets/final-cta-image.png';
+import ctaImage from '../../public/assets/final-cta-image.png';
 
 const FinalCTA = () => {
   const ref = useRef(null);
@@ -24,7 +24,7 @@ const FinalCTA = () => {
              <div className="relative w-full max-w-2xl aspect-video overflow-hidden rounded-[2.5rem] shadow-xl ring-1 ring-border/10 group bg-secondary/30">
                 <Image 
                   src={ctaImage} 
-                  alt="Ready to scale your business with WebSync Digital"
+                  alt="WebSync Digital Nigeria - Elite Web Design Strategy and Executive Consulting"
                   fill
                   className="object-contain p-4 rounded-[2rem] transition-transform duration-700 group-hover:scale-105"
                 />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "WebSync Digital", "WebSync Nigeria", "Best Web Design Agency Nigeria", 
     "₦9,999 Website Nigeria", "Affordable Web Design Lagos", "West CEO WebSync", 
     "King Austin COO WebSync", "Nwora Ebuka", "SME Digital Marketing Nigeria",
-    "Elite Web Development Lagos", "Mono Secured Payments Nigeria", "Fast Launch Website",
+    "Elite Web Development Lagos", "Paystack Secured Payments Nigeria", "Fast Launch Website",
     "Top Web Developers in Nigeria", "Software Engineering Agency Lagos", "SaaS Builders Nigeria",
     "Web Designers in Anambra", "Tech Companies in Awka", "Digital Agency Port Harcourt",
     "Website Creator Nigeria", "Web Development Subscription Nigeria", "Monthly Website Plan Nigeria",
@@ -40,11 +40,20 @@ export const metadata: Metadata = {
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 1200,
+        height: 630,
+        alt: "WebSync Digital - Elite Web Design for Nigerian SMEs",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "WebSync Digital | #1 Tech Agency for Nigerian Businesses",
-    description: "Get an elite website for ₦9,999/month. Zero setup fees. 100% Secure via Mono.",
+    description: "Get an elite website for ₦9,999/month. Zero setup fees. 100% Secure via Paystack.",
+    images: ["/icon.png"],
     creator: "@websyncdigital",
   },
   robots: {
