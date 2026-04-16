@@ -5,44 +5,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.websyncdigital.com.ng';
   const now = new Date();
 
+  // Helper to escape XML-illegal characters in URLs (specifically ampersands in Unsplash queries)
+  const escapeUrl = (url: string) => url.replace(/&/g, '&amp;');
+
   // Individual blog posts — auto-mapped with their cover images
   const blogPosts = allBlogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.id}`,
+    url: escapeUrl(`${baseUrl}/blog/${post.id}`),
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-    images: post.image ? [post.image] : [],
+    images: post.image ? [escapeUrl(post.image)] : [],
   }));
 
   return [
     // ── Tier 1: Homepage (critical anchor)
     {
-      url: baseUrl,
+      url: escapeUrl(baseUrl),
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1.0,
       images: [
-        `${baseUrl}/icon.png`,
-        `${baseUrl}/assets/hero-image.jpg`,
-        `${baseUrl}/assets/paystack-logo.jpg`,
+        escapeUrl(`${baseUrl}/icon.png`),
+        escapeUrl(`${baseUrl}/assets/hero-image.jpg`),
+        escapeUrl(`${baseUrl}/assets/paystack-logo.jpg`),
       ],
     },
 
     // ── Tier 2: Core commercial pages (sitelink targets)
     {
-      url: `${baseUrl}/pricing`,
+      url: escapeUrl(`${baseUrl}/pricing`),
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/work`,
+      url: escapeUrl(`${baseUrl}/work`),
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: escapeUrl(`${baseUrl}/contact`),
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -50,20 +53,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Tier 3: Authority pages
     {
-      url: `${baseUrl}/west`,
+      url: escapeUrl(`${baseUrl}/west`),
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.85,
-      images: [`${baseUrl}/assets/west_profile_updated.jpg`],
+      images: [escapeUrl(`${baseUrl}/assets/west_profile_updated.jpg`)],
     },
     {
-      url: `${baseUrl}/about`,
+      url: escapeUrl(`${baseUrl}/about`),
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.88,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: escapeUrl(`${baseUrl}/blog`),
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -74,13 +77,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Tier 5: Legal / utility (minimal crawl budget)
     {
-      url: `${baseUrl}/terms`,
+      url: escapeUrl(`${baseUrl}/terms`),
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.4,
     },
     {
-      url: `${baseUrl}/privacy`,
+      url: escapeUrl(`${baseUrl}/privacy`),
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.4,

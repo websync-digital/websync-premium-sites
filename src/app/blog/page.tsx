@@ -33,25 +33,25 @@ export const metadata: Metadata = {
 const blogPageSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://websyncdigital.com.ng/blog#blog",
+  "@id": "https://www.websyncdigital.com.ng/blog#blog",
   "name": "WebSync Digital Intelligence Hub",
   "description": "Premium insights on web design, Technical SEO, Generative Engine Optimization (GEO), and digital growth strategies for Nigerian SMEs.",
-  "url": "https://websyncdigital.com.ng/blog",
+  "url": "https://www.websyncdigital.com.ng/blog",
   "inLanguage": "en-NG",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websyncdigital.com.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://websyncdigital.com.ng/blog" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.websyncdigital.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.websyncdigital.com.ng/blog" }
     ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng",
+    "url": "https://www.websyncdigital.com.ng",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://websyncdigital.com.ng/icon.png"
+      "url": "https://www.websyncdigital.com.ng/icon.png"
     }
   },
   "author": {

@@ -36,21 +36,21 @@ export const metadata: Metadata = {
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://websyncdigital.com.ng/about#webpage",
+  "@id": "https://www.websyncdigital.com.ng/about#webpage",
   "name": "About WebSync Digital — Nigeria's No.1 Premium Web Agency",
   "description": "The mission, founders, and values behind WebSync Digital — Nigeria's most trusted premium web design agency for SMEs.",
-  "url": "https://websyncdigital.com.ng/about",
+  "url": "https://www.websyncdigital.com.ng/about",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websyncdigital.com.ng" },
-      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://websyncdigital.com.ng/about" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.websyncdigital.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.websyncdigital.com.ng/about" }
     ]
   },
   "mainEntity": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng",
+    "url": "https://www.websyncdigital.com.ng",
     "foundingDate": "2024",
     "foundingLocation": { "@type": "Place", "name": "Awka, Anambra, Nigeria" },
     "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 2 },
@@ -60,8 +60,8 @@ const aboutSchema = {
         "@type": "Person",
         "name": "West Taylor",
         "jobTitle": "CEO & Founder",
-        "url": "https://websyncdigital.com.ng/west",
-        "image": "https://websyncdigital.com.ng/assets/west_profile_updated.jpg",
+        "url": "https://www.websyncdigital.com.ng/west",
+        "image": "https://www.websyncdigital.com.ng/assets/west_profile_updated.jpg",
         "knowsAbout": ["Web Engineering", "Digital Strategy", "Nigerian SME Growth", "Next.js", "React"]
       },
       {
@@ -69,7 +69,7 @@ const aboutSchema = {
         "name": "Nwora Ebuka",
         "alternateName": "King Austin",
         "jobTitle": "COO & Co-Founder",
-        "url": "https://websyncdigital.com.ng",
+        "url": "https://www.websyncdigital.com.ng",
         "knowsAbout": ["Technical Architecture", "Operations", "Scalability", "Digital Infrastructure"]
       }
     ]
@@ -77,7 +77,7 @@ const aboutSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng"
   }
 };
 
@@ -187,7 +187,7 @@ export default function AboutPage() {
               <article id="founder-west" className="space-y-8 group" itemScope itemType="https://schema.org/Person">
                 <meta itemProp="name" content="West Taylor" />
                 <meta itemProp="jobTitle" content="CEO & Founder of WebSync Digital" />
-                <meta itemProp="url" content="https://websyncdigital.com.ng/west" />
+                <meta itemProp="url" content="https://www.websyncdigital.com.ng/west" />
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary border border-border shadow-lg transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-2xl">
                   <Image
                     src={westProfile}

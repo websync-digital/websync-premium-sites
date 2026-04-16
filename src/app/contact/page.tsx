@@ -32,21 +32,21 @@ export const metadata: Metadata = {
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "@id": "https://websyncdigital.com.ng/contact#webpage",
+  "@id": "https://www.websyncdigital.com.ng/contact#webpage",
   "name": "Contact WebSync Digital",
   "description": "Reach WebSync Digital via WhatsApp, phone, or email. Nigeria's #1 premium web design agency — fast response guaranteed.",
-  "url": "https://websyncdigital.com.ng/contact",
+  "url": "https://www.websyncdigital.com.ng/contact",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websyncdigital.com.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://websyncdigital.com.ng/contact" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.websyncdigital.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.websyncdigital.com.ng/contact" }
     ]
   },
   "mainEntity": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng",
+    "url": "https://www.websyncdigital.com.ng",
     "telephone": "+2349111719701",
     "email": "hello@websyncdigital.com.ng",
     "contactPoint": [
@@ -76,7 +76,7 @@ const contactSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng"
   }
 };
 

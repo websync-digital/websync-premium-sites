@@ -41,14 +41,15 @@ const personSchema = {
   "jobTitle": "Founder and CEO",
   "worksFor": {
     "@type": "Organization",
+    "@id": "https://www.websyncdigital.com.ng/#organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng"
   },
-  "url": "https://websyncdigital.com.ng/west",
-  "image": "https://websyncdigital.com.ng/assets/west-portrait.png",
+  "url": "https://www.websyncdigital.com.ng/west",
+  "image": "https://www.websyncdigital.com.ng/assets/west_profile_updated.jpg",
   "sameAs": [
     "https://www.instagram.com/west_taylor_?igsh=Y2J1b3BvdDlnODAy",
-    "https://websyncdigital.com.ng"
+    "https://www.websyncdigital.com.ng"
   ],
   "description": "West Taylor is a visionary entrepreneur and software engineer, architecting the future of accessible high-level technology and AI infrastructure. He is the founder and CEO of WebSync Digital.",
   "knowsAbout": ["Mixture of Experts Architecture", "Software Engineering", "Web Development", "Artificial Intelligence Infrastructure"]

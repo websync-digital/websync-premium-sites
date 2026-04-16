@@ -32,21 +32,21 @@ export const metadata: Metadata = {
 const workPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://websyncdigital.com.ng/work#webpage",
+  "@id": "https://www.websyncdigital.com.ng/work#webpage",
   "name": "Our Work — WebSync Digital Client Results & Portfolio",
   "description": "Portfolio and performance metrics from WebSync Digital's Nigerian SME client projects.",
-  "url": "https://websyncdigital.com.ng/work",
+  "url": "https://www.websyncdigital.com.ng/work",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websyncdigital.com.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://websyncdigital.com.ng/work" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.websyncdigital.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.websyncdigital.com.ng/work" }
     ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng"
   }
 };
 
