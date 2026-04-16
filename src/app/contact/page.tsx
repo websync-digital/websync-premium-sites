@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Contact WebSync Digital — WhatsApp, Call & Email Nigeria",
   description: "Get in touch with WebSync Digital — Nigeria's #1 premium web design agency. Reach us on WhatsApp, phone, or email. We respond within 24 hours.",
   alternates: {
-    canonical: "https://websyncdigital.com.ng/contact",
+    canonical: "https://www.websyncdigital.com.ng/contact",
   },
   openGraph: {
     title: "Contact WebSync Digital — Reach Us on WhatsApp",
     description: "Start your ₦9,999/month website today. Message WebSync Digital on WhatsApp and get a response within hours.",
-    url: "https://websyncdigital.com.ng/contact",
+    url: "https://www.websyncdigital.com.ng/contact",
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",

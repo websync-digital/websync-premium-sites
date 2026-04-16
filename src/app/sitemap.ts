@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { allBlogPosts } from '@/data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://websyncdigital.com.ng';
+  const baseUrl = 'https://www.websyncdigital.com.ng';
   const now = new Date();
 
   // Individual blog posts — auto-mapped with their cover images

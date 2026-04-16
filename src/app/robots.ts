@@ -26,7 +26,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/', '/api/'],
       },
     ],
-    sitemap: 'https://websyncdigital.com.ng/sitemap.xml',
-    host: 'https://websyncdigital.com.ng',
+    sitemap: 'https://www.websyncdigital.com.ng/sitemap.xml',
+    host: 'https://www.websyncdigital.com.ng',
   };
 }

@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const baseUrl = 'https://websyncdigital.com.ng';
+  const baseUrl = 'https://www.websyncdigital.com.ng';
   const postUrl = `${baseUrl}/blog/${post.id}`;
   const imageUrl = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
 
   return {
-    title: `${post.title} | WebSync Digital`,
+    title: `${post.title} | Digital Growth by WebSync Digital`,
     description: post.description,
     alternates: {
       canonical: postUrl,
@@ -38,9 +38,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.description,
       url: postUrl,
-      type: 'article',
+      siteName: "WebSync Digital",
+      locale: "en_NG",
+      type: "article",
       publishedTime: post.date,
-      authors: [post.author],
+      authors: ["West Taylor"],
       images: [
         {
           url: imageUrl,
@@ -51,7 +53,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.description,
       images: [imageUrl],
@@ -67,6 +69,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const baseUrl = 'https://www.websyncdigital.com.ng';
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -75,19 +79,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://websyncdigital.com.ng"
+        "item": baseUrl
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://websyncdigital.com.ng/blog"
+        "item": `${baseUrl}/blog`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "@id": `https://websyncdigital.com.ng/blog/${post.id}`
+        "@id": `${baseUrl}/blog/${post.id}`
       }
     ]
   };
@@ -97,24 +101,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.description,
-    "image": post.image.startsWith('http') ? post.image : `https://websyncdigital.com.ng${post.image}`,
+    "image": post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`,
     "datePublished": post.date,
     "author": {
       "@type": "Organization",
       "name": "WebSync Digital",
-      "url": "https://websyncdigital.com.ng"
+      "url": baseUrl
     },
     "publisher": {
       "@type": "Organization",
       "name": "WebSync Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://websyncdigital.com.ng/logo.png"
+        "url": `${baseUrl}/logo.png`
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://websyncdigital.com.ng/blog/${post.id}`
+      "@id": `${baseUrl}/blog/${post.id}`
     }
   };
 

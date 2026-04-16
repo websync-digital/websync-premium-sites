@@ -6,23 +6,23 @@ import westProfile from '../../../public/assets/west_profile_updated.jpg';
 import austinProfile from '../../../public/assets/nworah-ebuka-augustus.jpg';
 
 export const metadata: Metadata = {
-  title: "About WebSync Digital — Nigeria's No.1 Premium Web Agency",
-  description: "Learn about WebSync Digital — Nigeria's No.1 premium web design agency. Meet founders West Taylor (CEO) and King Austin (COO), our mission, and why 100+ SMEs trust us.",
+  title: "About WebSync Digital | Institutional Web Design for Nigeria",
+  description: "Learn about WebSync Digital's mission to empower Nigerian SMEs. Founded by West Taylor & King Austin to provide world-class tech for ₦9,999/month.",
   alternates: {
-    canonical: "https://websyncdigital.com.ng/about",
+    canonical: "https://www.websyncdigital.com.ng/about",
   },
   openGraph: {
-    title: "About WebSync Digital — Nigeria's No.1 Premium Web Agency",
-    description: "Meet West Taylor and King Austin — the founders behind Nigeria's most trusted web agency. Our mission: democratize elite web design for every Nigerian SME.",
-    url: "https://websyncdigital.com.ng/about",
+    title: "About WebSync Digital — The SME Growth Agency",
+    description: "Discover the elite team behind Nigeria's most trusted premium web agency. We build assets, not just websites.",
+    url: "https://www.websyncdigital.com.ng/about",
     siteName: "WebSync Digital",
     locale: "en_NG",
-    type: "profile",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About WebSync Digital — Meet the Founders",
-    description: "Nigeria's No.1 web agency. Founded by West Taylor & King Austin. CAC Verified RC 9470161.",
+    title: "About WebSync Digital Nigeria",
+    description: "Empowering Nigerian businesses with elite digital infrastructure.",
     creator: "@websyncdigital",
   },
   keywords: [

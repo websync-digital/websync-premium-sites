@@ -7,18 +7,18 @@ const SchemaOrg = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://websyncdigital.com.ng/#organization",
+    "@id": "https://www.websyncdigital.com.ng/#organization",
     "name": "WebSync Digital",
     "alternateName": ["WebSync Nigeria", "WebSync Digital Agency"],
-    "url": "https://websyncdigital.com.ng",
+    "url": "https://www.websyncdigital.com.ng",
     "taxID": "9470161",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://websyncdigital.com.ng/icon.png",
+      "url": "https://www.websyncdigital.com.ng/icon.png",
       "width": 512,
       "height": 512
     },
-    "image": "https://websyncdigital.com.ng/icon.png",
+    "image": "https://www.websyncdigital.com.ng/icon.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+2349111719701",
@@ -63,17 +63,17 @@ const SchemaOrg = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://websyncdigital.com.ng/#website",
+    "@id": "https://www.websyncdigital.com.ng/#website",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng",
+    "url": "https://www.websyncdigital.com.ng",
     "publisher": {
-      "@id": "https://websyncdigital.com.ng/#organization"
+      "@id": "https://www.websyncdigital.com.ng/#organization"
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://websyncdigital.com.ng/?s={search_term_string}"
+        "urlTemplate": "https://www.websyncdigital.com.ng/?s={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -83,10 +83,10 @@ const SchemaOrg = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": "https://websyncdigital.com.ng/#localbusiness",
+    "@id": "https://www.websyncdigital.com.ng/#localbusiness",
     "name": "WebSync Digital",
-    "image": "https://websyncdigital.com.ng/icon.png",
-    "url": "https://websyncdigital.com.ng",
+    "image": "https://www.websyncdigital.com.ng/icon.png",
+    "url": "https://www.websyncdigital.com.ng",
     "telephone": "+2349111719701",
     "priceRange": "₦₦",
     "description": "Nigeria's #1 premium web design agency for SMEs — delivering enterprise-grade websites at ₦9,999/month. Zero setup fees. 7-day launch guarantee.",
@@ -129,7 +129,7 @@ const SchemaOrg = () => {
             "billingDuration": "P1M",
             "unitCode": "MON"
           },
-          "url": "https://websyncdigital.com.ng/pricing"
+          "url": "https://www.websyncdigital.com.ng/pricing"
         },
         {
           "@type": "Offer",
@@ -137,7 +137,7 @@ const SchemaOrg = () => {
           "description": "Enterprise-grade website built once — ₦480,000 upfront with ₦10,000/month maintenance.",
           "price": "480000",
           "priceCurrency": "NGN",
-          "url": "https://websyncdigital.com.ng/pricing"
+          "url": "https://www.websyncdigital.com.ng/pricing"
         }
       ]
     }
@@ -153,35 +153,35 @@ const SchemaOrg = () => {
         "position": 1,
         "name": "Pricing — ₦9,999/Month Plans",
         "description": "See our all-inclusive monthly and one-time website pricing for Nigerian SMEs.",
-        "url": "https://websyncdigital.com.ng/pricing"
+        "url": "https://www.websyncdigital.com.ng/pricing"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 2,
         "name": "Our Work — Client Results",
         "description": "Browse real projects and performance metrics from our portfolio of Nigerian SME clients.",
-        "url": "https://websyncdigital.com.ng/work"
+        "url": "https://www.websyncdigital.com.ng/work"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 3,
         "name": "Contact Us — WhatsApp & Phone",
         "description": "Reach WebSync Digital instantly via WhatsApp or call our team directly.",
-        "url": "https://websyncdigital.com.ng/contact"
+        "url": "https://www.websyncdigital.com.ng/contact"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 4,
         "name": "Blog — Digital Growth Insights",
         "description": "Premium articles on web design, SEO strategy, and digital growth for Nigerian businesses.",
-        "url": "https://websyncdigital.com.ng/blog"
+        "url": "https://www.websyncdigital.com.ng/blog"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 5,
         "name": "Meet the Founder — West Taylor",
         "description": "The story of West Taylor, CEO & Founder of WebSync Digital — Nigeria's elite web architect.",
-        "url": "https://websyncdigital.com.ng/west"
+        "url": "https://www.websyncdigital.com.ng/west"
       }
     ]
   };
@@ -195,37 +195,37 @@ const SchemaOrg = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://websyncdigital.com.ng"
+        "item": "https://www.websyncdigital.com.ng"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Pricing & Plans",
-        "item": "https://websyncdigital.com.ng/pricing"
+        "item": "https://www.websyncdigital.com.ng/pricing"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Our Work",
-        "item": "https://websyncdigital.com.ng/work"
+        "item": "https://www.websyncdigital.com.ng/work"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Contact",
-        "item": "https://websyncdigital.com.ng/contact"
+        "item": "https://www.websyncdigital.com.ng/contact"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "Blog",
-        "item": "https://websyncdigital.com.ng/blog"
+        "item": "https://www.websyncdigital.com.ng/blog"
       },
       {
         "@type": "ListItem",
         "position": 6,
         "name": "Meet the Founder",
-        "item": "https://websyncdigital.com.ng/west"
+        "item": "https://www.websyncdigital.com.ng/west"
       }
     ]
   };
@@ -298,40 +298,40 @@ const SchemaOrg = () => {
   const personWestSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://websyncdigital.com.ng/west#person",
+    "@id": "https://www.websyncdigital.com.ng/west#person",
     "name": "West Taylor",
     "jobTitle": "CEO & Founder of WebSync Digital",
-    "worksFor": { "@id": "https://websyncdigital.com.ng/#organization" },
+    "worksFor": { "@id": "https://www.websyncdigital.com.ng/#organization" },
     "description": "West Taylor is the visionary CEO and Founder of WebSync Digital — widely recognized as a premier technical architect and digital authority in Nigeria's SME ecosystem.",
-    "url": "https://websyncdigital.com.ng/west",
-    "mainEntityOfPage": "https://websyncdigital.com.ng/west",
-    "image": "https://websyncdigital.com.ng/assets/west_profile_updated.jpg",
+    "url": "https://www.websyncdigital.com.ng/west",
+    "mainEntityOfPage": "https://www.websyncdigital.com.ng/west",
+    "image": "https://www.websyncdigital.com.ng/assets/west_profile_updated.jpg",
     "knowsAbout": ["Web Engineering", "Digital Transformation", "Nigerian SME Growth", "Knowledge Graph Optimization", "Next.js", "React"],
-    "sameAs": ["https://websyncdigital.com.ng", "https://wa.me/2349111719701"]
+    "sameAs": ["https://www.websyncdigital.com.ng", "https://wa.me/2349111719701"]
   };
 
   const personKingSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://websyncdigital.com.ng/#king-austin",
+    "@id": "https://www.websyncdigital.com.ng/#king-austin",
     "name": "Nwora Ebuka",
     "alternateName": "King Austin",
     "jobTitle": "COO & Co-Founder of WebSync Digital",
-    "worksFor": { "@id": "https://websyncdigital.com.ng/#organization" },
+    "worksFor": { "@id": "https://www.websyncdigital.com.ng/#organization" },
     "description": "King Austin is the COO and Co-Founder of WebSync Digital, responsible for operations, technical architecture, and scalable delivery of elite digital products for Nigerian SMEs.",
-    "url": "https://websyncdigital.com.ng",
-    "mainEntityOfPage": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng",
+    "mainEntityOfPage": "https://www.websyncdigital.com.ng"
   };
 
   // 8. Blog CollectionPage
   const blogCollectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://websyncdigital.com.ng/blog#collection",
+    "@id": "https://www.websyncdigital.com.ng/blog#collection",
     "name": "WebSync Digital Intelligence Hub",
     "description": "Premium insights, web design guides, SEO strategies, and digital growth playbooks for the Nigerian SME market.",
-    "url": "https://websyncdigital.com.ng/blog",
-    "publisher": { "@id": "https://websyncdigital.com.ng/#organization" }
+    "url": "https://www.websyncdigital.com.ng/blog",
+    "publisher": { "@id": "https://www.websyncdigital.com.ng/#organization" }
   };
 
   return (

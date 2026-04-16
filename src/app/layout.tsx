@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     "Domain and Hosting Nigeria", "Web Design Consultancy Nigeria", "B2B Web Design Nigeria",
     "Creative Web Agency Nigeria", "Web Developers in Onitsha", "Web Solutions for African Businesses"
   ],
-  authors: [{ name: "WebSync Digital Team", url: "https://websyncdigital.com.ng" }],
-  metadataBase: new URL("https://websyncdigital.com.ng"),
+  authors: [{ name: "WebSync Digital Team", url: "https://www.websyncdigital.com.ng" }],
+  metadataBase: new URL("https://www.websyncdigital.com.ng"),
   alternates: {
     canonical: "/",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "WebSync Digital | Elite Web Design for Nigerian SMEs",
     description: "Transform your business with a premium digital presence for only ₦9,999 monthly. No setup fees. Powered by West & King Austin.",
-    url: "https://websyncdigital.com.ng",
+    url: "https://www.websyncdigital.com.ng",
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",

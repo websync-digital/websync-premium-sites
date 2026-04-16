@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Pricing — ₦9,999/Month Website | WebSync Digital Nigeria",
   description: "Get a premium, enterprise-grade website for just ₦9,999/month with zero setup fees. Compare WebSync Digital's monthly vs one-time pricing plans. Launch in 7 days.",
   alternates: {
-    canonical: "https://websyncdigital.com.ng/pricing",
+    canonical: "https://www.websyncdigital.com.ng/pricing",
   },
   openGraph: {
     title: "WebSync Digital Pricing — ₦9,999/Month Premium Website",
     description: "Zero setup fees. Zero long-term contracts. Nigeria's most affordable premium web design subscription plan for SMEs.",
-    url: "https://websyncdigital.com.ng/pricing",
+    url: "https://www.websyncdigital.com.ng/pricing",
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://websyncdigital.com.ng/pricing#webpage",
+  "@id": "https://www.websyncdigital.com.ng/pricing#webpage",
   "name": "WebSync Digital Pricing — ₦9,999/Month Website",
   "description": "Compare WebSync Digital pricing plans — monthly subscription at ₦9,999/month or one-time build at ₦480,000. Zero setup fees guaranteed.",
-  "url": "https://websyncdigital.com.ng/pricing",
+  "url": "https://www.websyncdigital.com.ng/pricing",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websyncdigital.com.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://websyncdigital.com.ng/pricing" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.websyncdigital.com.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.websyncdigital.com.ng/pricing" }
     ]
   },
   "mainEntity": {
@@ -92,7 +92,7 @@ const pricingSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "WebSync Digital",
-    "url": "https://websyncdigital.com.ng"
+    "url": "https://www.websyncdigital.com.ng"
   }
 };
 

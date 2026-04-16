@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Blog — Digital Growth Insights for Nigerian SMEs | WebSync Digital",
   description: "Read WebSync Digital's expert guides on web design, Technical SEO, GEO, and digital strategy to help Nigerian businesses grow and rank higher online.",
   alternates: {
-    canonical: "https://websyncdigital.com.ng/blog",
+    canonical: "https://www.websyncdigital.com.ng/blog",
   },
   openGraph: {
     title: "Blog — WebSync Digital Intelligence Hub",
     description: "Premium articles on web design, SEO strategy, Generative Engine Optimization, and digital growth playbooks for Nigerian SMEs.",
-    url: "https://websyncdigital.com.ng/blog",
+    url: "https://www.websyncdigital.com.ng/blog",
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",

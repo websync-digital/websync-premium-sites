@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Our Work — Client Results & Portfolio | WebSync Digital Nigeria",
   description: "See real results from WebSync Digital's Nigerian SME clients. Portfolio of premium websites, performance metrics, and case studies from Nigeria's #1 web design agency.",
   alternates: {
-    canonical: "https://websyncdigital.com.ng/work",
+    canonical: "https://www.websyncdigital.com.ng/work",
   },
   openGraph: {
     title: "Our Work — WebSync Digital Portfolio & Client Results",
     description: "Browse real client projects and performance metrics from WebSync Digital — Nigeria's leading premium web design agency.",
-    url: "https://websyncdigital.com.ng/work",
+    url: "https://www.websyncdigital.com.ng/work",
     siteName: "WebSync Digital",
     locale: "en_NG",
     type: "website",
