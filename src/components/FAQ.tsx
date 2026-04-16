@@ -19,8 +19,8 @@ const faqItems = [
     answer: "We've spent months building a specialized design and development infrastructure designed for high-conversion performance. This depth of focus allows us to deliver elite assets at unmatched speeds without sacrificing quality."
   },
   {
-    question: "Is my bank information safe with the Mono integration?",
-    answer: "100%. Mono connects directly to your bank securely. WebSync Digital never sees or stores your login, password, or BVN. All sensitive data is handled exclusively by Mono's institutional-grade bank security."
+    question: "Is my payment information safe with the Paystack integration?",
+    answer: "100%. Paystack is a PCI DSS Level 1 certified processor—the highest security level in the global payments industry. WebSync Digital never sees or stores your card details. All transactions are handled exclusively by Paystack's institutional-grade encrypted infrastructure."
   },
   {
     question: "Why is WebSync Digital so much more affordable than traditional agencies?",

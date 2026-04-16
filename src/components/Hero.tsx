@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from 'framer-motion';
-import heroImage from '@/assets/hero-image.jpg';
+import heroImage from '../../public/assets/hero-image.jpg';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -60,7 +60,12 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="mt-8 md:mt-10 flex flex-wrap gap-4"
             >
-              <a href="#pricing" className="btn-hero">
+              <a 
+                href="https://paystack.shop/pay/qgnem3g4a8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-hero"
+              >
                 Get Started for ₦9,999/month
               </a>
               <a

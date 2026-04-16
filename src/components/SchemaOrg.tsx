@@ -9,6 +9,7 @@ const SchemaOrg = () => {
     "name": "WebSync Digital",
     "alternateName": "WebSync Nigeria",
     "url": "https://websyncdigital.com.ng",
+    "taxID": "9470161",
     "logo": "https://websyncdigital.com.ng/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -70,8 +71,8 @@ const SchemaOrg = () => {
       "url": "https://websyncdigital.com.ng"
     },
     "description": "Operations and technical architecture expert, co-founder of WebSync Digital, driving seamless scalability for Nigerian SMEs.",
-    "url": "https://websyncdigital.com.ng/#founders",
-    "mainEntityOfPage": "https://websyncdigital.com.ng/#founders"
+    "url": "https://websyncdigital.com.ng/#vision",
+    "mainEntityOfPage": "https://websyncdigital.com.ng/#vision"
   };
 
   const navigationSchema = {
@@ -100,7 +101,7 @@ const SchemaOrg = () => {
         "@type": "SiteNavigationElement",
         "position": 4,
         "name": "Vision",
-        "url": "https://websyncdigital.com.ng/#founders"
+        "url": "https://websyncdigital.com.ng/#vision"
       },
       {
         "@type": "SiteNavigationElement",
