@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import westProfile from "../../public/assets/west_profile_updated.jpg";
-import austinProfile from "../../public/assets/king-austin-new.jpg";
+import austinProfile from "../../public/assets/nworah-ebuka-augustus.jpg";
 
 const Visionary = () => {
   const ref = useRef(null);
