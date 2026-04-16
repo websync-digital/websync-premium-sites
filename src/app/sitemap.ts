@@ -9,13 +9,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const escapeUrl = (url: string) => url.replace(/&/g, '&amp;');
 
   // Individual blog posts — auto-mapped with their cover images
-  const blogPosts = allBlogPosts.map((post) => ({
-    url: escapeUrl(`${baseUrl}/blog/${post.id}`),
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-    images: post.image ? [escapeUrl(post.image)] : [],
-  }));
+  const blogPosts = allBlogPosts.map((post) => {
+    const imageUrl = post.image.startsWith('http') 
+      ? post.image 
+      : `${baseUrl}${post.image.startsWith('/') ? '' : '/'}${post.image}`;
+      
+    return {
+      url: escapeUrl(`${baseUrl}/blog/${post.id}`),
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      images: post.image ? [escapeUrl(imageUrl)] : [],
+    };
+  });
 
   return [
     // ── Tier 1: Homepage (critical anchor)
