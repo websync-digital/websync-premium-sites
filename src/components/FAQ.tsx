@@ -16,11 +16,11 @@ const faqItems = [
   },
   {
     question: "How can you launch a high-end website in just 7 days?",
-    answer: "We've spent months building a specialized design and development infrastructure designed for high-conversion performance. This depth of focus allows us to deliver elite assets at unmatched speeds without sacrificing quality."
+    answer: "We’ve spent months building a specialized design and development infrastructure designed for high-conversion performance. This depth of focus allows us to deliver elite assets at unmatched speeds without sacrificing quality."
   },
   {
     question: "Is my payment information safe with the Paystack integration?",
-    answer: "100%. Paystack is a PCI DSS Level 1 certified processor—the highest security level in the global payments industry. WebSync Digital never sees or stores your card details. All transactions are handled exclusively by Paystack's institutional-grade encrypted infrastructure."
+    answer: "100%. Paystack is a PCI DSS Level 1 certified processor—the highest security level in the global payments industry. WebSync Digital never sees or stores your card details. All transactions are handled exclusively by Paystack’s institutional-grade encrypted infrastructure."
   },
   {
     question: "Why is WebSync Digital so much more affordable than traditional agencies?",
@@ -28,7 +28,15 @@ const faqItems = [
   },
   {
     question: "Can I cancel my subscription at any time?",
-    answer: "Absolutely. We prioritize your freedom over restrictive, long-term contracts. If you ever feel we aren't delivering the value your brand deserves, you can cancel with zero penalties or hidden exit fees."
+    answer: "Absolutely. We prioritize your freedom over restrictive, long-term contracts. If you ever feel we aren’t delivering the value your brand deserves, you can cancel with zero penalties or hidden exit fees."
+  },
+  {
+    question: "Who are the founders of WebSync Digital?",
+    answer: "WebSync Digital was founded by West Taylor (CEO & Founder) — a recognized digital authority and expert web architect — and King Austin, Nwora Ebuka (COO & Co-Founder), who drives operations and technical scalability for Nigeria’s #1 web agency."
+  },
+  {
+    question: "What services does WebSync Digital offer?",
+    answer: "WebSync Digital provides: elite bespoke web application development (React, Next.js), comprehensive Technical SEO and high-performance search architecture, Generative Engine Optimization (GEO) for AI search placements, and Digital Entity & Knowledge Graph verification to build lasting brand authority."
   }
 ];
 
@@ -46,17 +54,28 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-16"
         >
-          <span className="text-sm font-body font-medium tracking-widest uppercase text-primary">
+          {/* Authority Stamp */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-6">
+            <span className="text-xs">🏆</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Nigeria&apos;s No.1 Web Agency · RC 9470161 Verified
+            </span>
+          </div>
+          <span className="block text-sm font-body font-medium tracking-widest uppercase text-primary">
             Information
           </span>
           <h2 className="mt-3 md:mt-4 font-display text-3xl sm:text-4xl md:text-5xl font-medium text-foreground">
             Frequently Asked Questions
           </h2>
+          <p className="mt-4 font-body text-sm text-muted-foreground max-w-lg mx-auto">
+            Everything you need to know about working with Nigeria&apos;s most trusted premium web agency.
+          </p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Accordion type="single" collapsible className="w-full">
@@ -71,6 +90,26 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </motion.div>
+        
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8, delay: 0.2 }}
+           className="mt-16 flex flex-col items-center gap-6"
+        >
+          <p className="font-body text-sm text-muted-foreground text-center">
+            Still have questions about how we scale Nigerian businesses?
+          </p>
+          <a
+            href="https://wa.me/2349111719701?text=Hi%20WebSync%20Digital%2C%20I%20have%20a%20question%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-hero"
+          >
+            Chat with our Team on WhatsApp
+          </a>
         </motion.div>
       </div>
     </section>

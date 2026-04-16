@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import westProfile from "../../public/assets/west_profile_updated.jpg";
-import austinProfile from "../../public/assets/nworah-ebuka-augustus.jpg";
+import austinProfile from "../../public/assets/king-austin-new.jpg";
 
 const Visionary = () => {
   const ref = useRef(null);
@@ -147,6 +147,24 @@ const Visionary = () => {
                    </div>
                 </div>
              </div>
+
+             {/* CTA Row */}
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8, delay: 0.2 }}
+               className="mt-24 flex justify-center"
+             >
+               <a 
+                 href="https://wa.me/2349111719701?text=Hi%20WebSync%20Digital%2C%20I%20want%20to%20build%20my%20digital%20legacy."
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="btn-hero px-12 py-5"
+               >
+                 Build Your Legacy Today →
+               </a>
+             </motion.div>
           </motion.div>
 
         </div>

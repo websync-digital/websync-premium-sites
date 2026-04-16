@@ -35,12 +35,13 @@ const Hero = () => {
         <div className="container-custom">
           <div className="max-w-3xl">
             <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-foreground leading-tight text-shadow-hero text-balance"
+              viewport={{ once: true }}
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-foreground leading-tight text-shadow-hero text-balance text-center md:text-left"
             >
-              Powering Nigerian Businesses with World-Class Websites. Only ₦9,999 Monthly.
+              Nigeria&apos;s No.1 Web Agency. World-Class Websites for Only ₦9,999 Monthly.
             </motion.h1>
 
             <motion.p
@@ -49,9 +50,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-4 md:mt-6 text-base md:text-lg lg:text-xl text-primary-foreground/90 font-body font-light max-w-2xl"
             >
-              Join 100+ Nigerian businesses scaling with WebSync Digital. 
-              The most affordable high-end web design agency in Lagos. 
-              Launched in 7 days. Guaranteed SME growth.
+              Join 100+ Nigerian SMEs already scaling with WebSync Digital — the most trusted premium web design agency in Nigeria. Zero setup fees. Launched in 7 days. Guaranteed.
             </motion.p>
 
             <motion.div

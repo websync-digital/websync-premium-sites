@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Providers } from "@/components/providers";
 import SchemaOrg from "@/components/SchemaOrg";
+import { Analytics } from "@vercel/analytics/react";
 import "../index.css";
 
 export const metadata: Metadata = {
@@ -79,6 +80,7 @@ export default function RootLayout({
       <body>
         <SchemaOrg />
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );

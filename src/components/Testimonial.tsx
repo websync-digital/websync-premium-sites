@@ -55,7 +55,7 @@ const Testimonial = () => {
                 </h4>
                 <p className="text-sm md:text-base font-body text-primary font-bold uppercase tracking-[0.3em] flex items-center gap-2">
                    <span className="w-2 h-2 rounded-full bg-primary" />
-                   Nigeria
+                   Verified Nigerian SME
                 </p>
               </motion.div>
 
@@ -76,6 +76,27 @@ const Testimonial = () => {
               </motion.div>
             </div>
           </div>
+
+          {/* CTA Row */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-16 flex flex-col items-center gap-4"
+          >
+            <p className="font-body text-sm text-muted-foreground">
+              Ready to be our next success story?
+            </p>
+            <a
+              href="https://wa.me/2349111719701?text=Hi%20WebSync%20Digital%2C%20I%20want%20to%20get%20the%20same%20results%20as%20your%20other%20clients."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-hero"
+            >
+              Start Your Project Now →
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
