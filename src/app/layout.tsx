@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Providers } from "@/components/providers";
 import SchemaOrg from "@/components/SchemaOrg";
+import { Preloader } from "@/components/Preloader";
 import "../index.css";
 
 export const metadata: Metadata = {
@@ -77,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Preloader />
         <SchemaOrg />
         <Providers>{children}</Providers>
       </body>
